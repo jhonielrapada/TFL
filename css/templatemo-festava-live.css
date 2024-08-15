@@ -127,6 +127,11 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.small-text {
+  font-size: 0.875rem; /* Adjust the size as needed */
+}
+
+
 .link-fx-1 {
   color: var(--white-color);
   position: relative;
