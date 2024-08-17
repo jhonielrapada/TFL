@@ -1,10 +1,4 @@
-/*
-
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
-*/
+ 
 
 
 /*---------------------------------------
@@ -127,9 +121,6 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
-.small-text {
-  font-size: 0.875rem; /* Adjust the size as needed */
-}
 
 
 .link-fx-1 {
@@ -481,7 +472,7 @@ strong {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 60px;
   height: calc(100vh - 51px);
 }
 
@@ -594,14 +585,32 @@ strong {
 .artists-thumb {
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .artists-image {
   border-radius: var(--border-radius-medium);
+  padding: 5px;
   display: block;
   width: 100%;
 }
+
+/* .artists-thumb {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 400px;  Set a fixed width 
+  height: 250px; /* Set a fixed height 
+}
+.artists-image {
+  border-radius: var(--border-radius-medium);
+  padding: 5px;
+  display: block;
+  width: 100%; /* Full width of the container 
+  height: 100%; /* Full height of the container 
+  object-fit: cover; /* Ensures the image covers the container without distortion 
+} */
+
 
 .artists-thumb:hover .artists-hover {
   transform: translateY(0);
@@ -614,22 +623,23 @@ strong {
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
-  margin: 20px;
-  padding: 35px;
+  margin: 5px;
+  padding: 5px;
   transition: all 0.5s ease;
   transform: translateY(100%);
   position: absolute;
   bottom: 0;
-  right: 0;
-  left: 0;
+  right: 20px; /* Adjust this value */
+  left: 20px;
+  
   opacity: 0;
 }
 
 .artists-hover p strong {
   color: var(--white-color);
   display: inline-block;
-  min-width: 180px;
-  margin-right: 20px;
+  min-width: 150px;
+  margin-right: 10px;
 }
 
 .artists-hover p a {
@@ -950,8 +960,7 @@ strong {
   }
 
   .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0px; 
   }
   
   .navbar {
@@ -966,9 +975,54 @@ strong {
     padding: 0;
   }
 
-  .hero-section {
+  /* .hero-section {
     padding-top: 150px;
+  } */
+
+  /* General Section Styling */
+  .hero-section {
+    text-align: center; /* Center-align text and image */
+      display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
   }
+
+.hero-section img {
+  max-width: 70px; /* Limit image width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+  
+
+
+ 
+
+/* Optional: Responsive Font Sizes */
+@media (max-width: 508px) {
+  .hero-section h1 {
+    font-size: 3.5rem; /* Adjust size for smaller screens */
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem; /* Adjust size for smaller screens */
+  }
+  .hero-section h3 {
+    font-size: 1.5rem; /* Adjust size for smaller screens */
+  }
+
+  .hero-section h4 {
+    font-size: 0.875rem; /* Further adjust size for smaller screens */
+  }
+}
+
+/* Button Styling */
+.hero-section .btn {
+  margin-top: 60px; /* Space above the button */
+}
+
+
 
   .pricing-thumb {
     padding: 35px;
