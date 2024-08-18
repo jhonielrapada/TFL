@@ -597,30 +597,34 @@ strong {
   width: 100%;
 }
 
-/* .artists-thumb {
+  /* .artists-thumb {
   position: relative;
   overflow: hidden;
   margin-bottom: 10px;
-  width: 400px;  Set a fixed width 
-  height: 250px; /* Set a fixed height 
-}
-.artists-image {
+  width: 400px;  
+  height: 25px;  
+}   */
+
+/* .artists-image {
   border-radius: var(--border-radius-medium);
   padding: 5px;
   display: block;
   width: 100%; /* Full width of the container 
   height: 100%; /* Full height of the container 
   object-fit: cover; /* Ensures the image covers the container without distortion 
-} */
+} */ 
 
 .artists-thumb:hover .artists-hover {
   transform: translateY(0);
   opacity: 1;
 }
 
+
+.artists-hover p {
+  color: white; /* Ensure paragraph text is white */
+}
 .artists-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
+  background-color: black;  
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -632,24 +636,23 @@ strong {
   bottom: 0;
   right: 20px; /* Adjust this value */
   left: 20px;
-
   opacity: 0;
 }
 
 .artists-hover p strong {
-  color: var(--white-color);
+  color: white;
   display: inline-block;
   min-width: 150px;
   margin-right: 10px;
 }
 
 .artists-hover p a {
-  color: var(--secondary-color);
+  color: white;
 }
 
-.artists-hover p a:hover {
-  color: var(--white-color);
-}
+/* .artists-hover p a:hover {
+  color: white;
+} */
 
 .artists-hover hr {
   margin: 1.5rem 0;
@@ -658,6 +661,34 @@ strong {
 /*---------------------------------------
   SCHEDULE              
 -----------------------------------------*/
+/* Background Colors */
+.bg-light-pink { background-color: #f3dcd4; }
+.bg-light-coral { background-color: #ecc9c7; }
+.bg-light-green { background-color: #d9e3da; }
+.bg-light-beige { background-color: #d1cfc0; }
+
+/* Background Images */
+.pop-background {
+  background-image: url('path-to-pop-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.rock-background {
+  background-image: url('path-to-rock-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.country-background {
+  background-image: url('path-to-country-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Additional Styles */
+.section-overlay {
+  /* Your overlay styles */
+}
+
 .schedule-section {
   background-image: url("../images/nainoa-shizuru-unsplash-blur.jpg");
   background-color: #242424;
@@ -667,6 +698,8 @@ strong {
 }
 .table-responsive {
   filter: drop-shadow(2px 2px 4px #606060);
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+
 }
 
 .schedule-table {
@@ -687,7 +720,8 @@ strong {
 .schedule-table tr,
 .schedule-table td {
   border-bottom-color: #363a3e;
-  padding: 30px;
+  padding: 1rem; /* Adjust padding for responsiveness */
+
 }
 
 .schedule-table tr:last-child th,
@@ -879,14 +913,16 @@ strong {
   SOCIAL ICON               
 -----------------------------------------*/
 .social-icon {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: left; /* Aligns items vertically */
+  margin-left: -30px; /* Adjust this value as needed to move icons left */
+
 }
 
 .social-icon-item {
   list-style: none;
-  display: inline-block;
-  vertical-align: top;
+  display: flex; /* Changed from inline-block to flex */
+  align-items: left; /* Ensures vertical alignment */
 }
 
 .social-icon-link {
@@ -894,13 +930,16 @@ strong {
   border-radius: var(--border-radius-large);
   color: var(--white-color);
   font-size: var(--copyright-font-size);
-  display: block;
+  display: flex;
   margin-right: 10px;
   text-align: center;
   width: 35px;
   height: 35px;
   line-height: 36px;
   transition: background 0.2s, color 0.2s;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .social-icon-link:hover {
@@ -1006,8 +1045,8 @@ strong {
     }
   }
 
-  /* Button Styling */
-  .hero-section .btn {
+   /* Button Styling */
+   .hero-section .btn {
     margin-top: 30px; /* Space above the button */
   }
 
@@ -1015,6 +1054,20 @@ strong {
     padding: 35px;
   }
 
+  .ticket-section {
+    padding-top: 130px;
+  }
+
+  .ticket-form {
+    padding: 30px;
+  }
+
+  /* Ensure the table can scroll horizontally on small screens */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  /* Responsive adjustments for the schedule table */
   .schedule-table h3 {
     font-size: 22px;
   }
@@ -1028,19 +1081,42 @@ strong {
     padding: 25px;
   }
 
-  .ticket-section {
-    padding-top: 130px;
+  @media screen and (max-width: 767px) {
+    .schedule-table th,
+    .schedule-table td {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .schedule-table h3 {
+      font-size: 18px; /* Adjust font size for headings in the table */
+    }
+
+    .schedule-table th {
+      font-size: 14px; /* Adjust font size for table headers */
+    }
+
+    .schedule-table td {
+      font-size: 12px; /* Adjust font size for table data */
+    }
   }
 
-  .ticket-form {
-    padding: 30px;
-  }
-}
+  @media screen and (max-width: 480px) {
+    .schedule-table th,
+    .schedule-table td {
+      padding: 6px; /* Minimal padding for very small screens */
+    }
 
-@media screen and (max-width: 767px) {
-  .custom-btn {
-    font-size: 14px;
-    padding: 10px 20px;
+    .schedule-table h3 {
+      font-size: 14px; /* Minimal font size for headings */
+    }
+
+    .schedule-table th {
+      font-size: 10px; /* Minimal font size for headers */
+    }
+
+    .schedule-table td {
+      font-size: 8px; /* Minimal font size for data */
+    }
   }
 }
 
