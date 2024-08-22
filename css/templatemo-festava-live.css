@@ -277,9 +277,9 @@ strong {
 }
 
 .custom-image-size {
-    max-width: 80px;
+    max-width: 100px;
     /* Adjust the width as needed */
-    height: 40px;
+    height: 50px;
     /* Keeps the aspect ratio */
 }
 
@@ -291,8 +291,8 @@ strong {
     /* Maintains the aspect ratio */
 }
 
-.img-fluid{
-  margin-top: -20px;
+.img-fluid {
+    margin-top: -20px;
 }
 
 /*---------------------------------------
@@ -354,10 +354,10 @@ strong {
 -----------------------------------------*/
 .site-header {
     background-color: rgb(24, 134, 52);
-    padding-top: 12px;
-    padding-bottom: 10px;
-}
+    padding-top: 20px;
+    padding-bottom: 20px;
 
+}
 
 /*---------------------------------------
   NAVIGATION              
@@ -507,21 +507,32 @@ strong {
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
+
+/*---------------------------------------
+  ABOUT            
+-----------------------------------------*/
 .about-section {
     background-image: url("../images/edward-unsplash-blur.jpg");
     background-color: #704010;
+    /* Fallback color */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    /* Ensures the background image is centered */
     position: relative;
+    padding: 20px;
+    /* Adds padding for better content spacing */
 }
 
 .about-image {
     border-radius: var(--border-radius-medium);
-    display: block;
+    height: auto;
+ 
     position: relative;
-    /* Ensure positioning context */
-    bottom: 40px;
-    /* Move the image 70px upwards */
+
+ 
+    margin: 0 auto;
+ 
 }
 
 .about-text-wrap {
@@ -537,20 +548,6 @@ strong {
     line-height: 70px;
     text-align: center;
 }
-
-/* .about-text-info {
-  backdrop-filter: blur(5px) saturate(180%);
-  -webkit-backdrop-filter: blur(5px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: var(--border-radius-medium);
-  border: 1px solid rgba(209, 213, 219, 0.3);
-  position: absolute;
-  bottom: -70px;
-  right: 0;
-  left: 0;
-  margin: 20px;
-  padding: 10px;
-} */
 
 /*---------------------------------------
   TICKET               
@@ -602,24 +599,7 @@ strong {
     display: block;
     width: 100%;
 }
-
-/* .artists-thumb {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 10px;
-  width: 400px;  
-  height: 25px;  
-}   */
-
-/* .artists-image {
-  border-radius: var(--border-radius-medium);
-  padding: 5px;
-  display: block;
-  width: 100%; /* Full width of the container 
-  height: 100%; /* Full height of the container 
-  object-fit: cover; /* Ensures the image covers the container without distortion 
-} */
-
+ 
 .artists-thumb:hover .artists-hover {
     transform: translateY(0);
     opacity: 1;
@@ -697,11 +677,6 @@ strong {
     background-image: url("path-to-country-image.jpg");
     background-size: cover;
     background-position: center;
-}
-
-/* Additional Styles */
-.section-overlay {
-    /* Your overlay styles */
 }
 
 .schedule-section {
@@ -787,8 +762,9 @@ strong {
 }
 
 /*---------------------------------------
-  PRICING              
+PRICING
 -----------------------------------------*/
+.pricing-section {}
 .pricing-thumb {
     border: 5px dotted var(--dark-color);
     border-radius: var(--border-radius-medium);
@@ -796,7 +772,10 @@ strong {
     padding: 50px;
 }
 
-.pricing-thumb h3 small {
+.col-md-6 {
+    margin-bottom: 20px;
+}
+f .pricing-thumb h3 small {
     display: inline-block;
     font-size: var(--p-font-size);
     margin-right: 15px;
@@ -842,6 +821,52 @@ strong {
 
 .pricing-thumb .link-fx-1:hover {
     color: var(--link-hover-color);
+}
+
+/*FRONTYARD*/
+.small-picture {
+    border-radius: var(--border-radius-medium);
+    /* Ensure this variable is defined */
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+.small-picture1 {
+    border-radius: var(--border-radius-medium);
+    /* Ensure this variable is defined */
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+.r1 {
+    border-radius: var(--border-radius-medium);
+    /* Ensure this variable is defined */
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+.text-content {
+    margin-left: auto;
+    margin-right: 20;
+}
+.text-content1 {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+/* Select the section by its class or id */
+.games-section {
+
+    padding: 60px 0;
+    /* Adjust padding as needed */
 }
 
 /*---------------------------------------
@@ -920,6 +945,8 @@ strong {
     list-style: none;
     display: inline-block;
     margin-right: 15px;
+    color: orange;
+
 }
 
 .copyright-text {
@@ -928,15 +955,9 @@ strong {
 
 /* Adjust margin for the titles and text */
 .site-footer-title {
-  margin-top: -70px; /* Adjust as needed */
+    margin-top: -70px;
+    /* Adjust as needed */
 }
-/* Container for the footer content */
-.footer-container {
-  /* Add any necessary styling for the container */
-}
-
- 
-
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -1206,12 +1227,16 @@ strong {
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px; /* Height of the green banner */
-    background-color: #28a745; /* Green background color */
-    z-index: -1; /* Ensure it is behind the content */
+    height: 40px;
+    /* Height of the green banner */
+    background-color: #28a745;
+    /* Green background color */
+    z-index: -1;
+    /* Ensure it is behind the content */
 }
 
 .games-info {
     position: relative;
-    z-index: 1; /* Ensure content is above the green banner */
+    z-index: 1;
+    /* Ensure content is above the green banner */
 }
