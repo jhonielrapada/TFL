@@ -50,7 +50,6 @@ h5,
 h6 {
     color: var(--dark-color);
 }
-
 h1,
 h2,
 h3,
@@ -270,25 +269,20 @@ strong {
 }
 
 /*---------------------------------------
-  CUSTOM ICON COLOR               
++CUSTOM ICON COLOR
 -----------------------------------------*/
 .custom-icon {
-    color: rgb(24, 134, 52);
+color: rgb(24, 134, 52);
 }
 
 .custom-image-size {
-    max-width: 100px;
-    /* Adjust the width as needed */
-    height: 50px;
-    /* Keeps the aspect ratio */
+max-width: 100px; height: 50px;
 }
 
 /* TFL LOGO */
 .custom-size {
-    max-width: 300px;
-    /* Adjust this value as needed to make the image larger */
-    height: auto;
-    /* Maintains the aspect ratio */
+max-width: 300px;
+height: auto;
 }
 
 .img-fluid {
@@ -296,7 +290,7 @@ strong {
 }
 
 /*---------------------------------------
-  CUSTOM BUTTON               
+CUSTOM BUTTON
 -----------------------------------------*/
 .custom-btn {
     background: rgb(24, 134, 52);
@@ -334,7 +328,7 @@ strong {
 }
 
 /*---------------------------------------
-  VIDEO              
+VIDEO
 -----------------------------------------*/
 .video-wrap {
     z-index: -100;
@@ -350,7 +344,7 @@ strong {
 }
 
 /*---------------------------------------
-  SITE HEADER              
+SITE HEADER
 -----------------------------------------*/
 .site-header {
     background-color: rgb(24, 134, 52);
@@ -360,7 +354,7 @@ strong {
 }
 
 /*---------------------------------------
-  NAVIGATION              
+NAVIGATION
 -----------------------------------------*/
 .sticky-wrapper {
     position: absolute;
@@ -474,7 +468,7 @@ strong {
 }
 
 /*---------------------------------------
-  HERO        
+HERO
 -----------------------------------------*/
 .hero-section {
     position: relative;
@@ -505,11 +499,7 @@ strong {
 }
 
 /*---------------------------------------
-  ABOUT              
------------------------------------------*/
-
-/*---------------------------------------
-  ABOUT            
+ABOUT
 -----------------------------------------*/
 .about-section {
     background-image: url("../images/edward-unsplash-blur.jpg");
@@ -518,21 +508,15 @@ strong {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* Ensures the background image is centered */
-    position: relative;
+     position: relative;
     padding: 20px;
-    /* Adds padding for better content spacing */
-}
+ }
 
 .about-image {
     border-radius: var(--border-radius-medium);
     height: auto;
- 
     position: relative;
-
- 
     margin: 0 auto;
- 
 }
 
 .about-text-wrap {
@@ -550,7 +534,7 @@ strong {
 }
 
 /*---------------------------------------
-  TICKET               
+TICKET
 -----------------------------------------*/
 .ticket-section {
     background-image: url("../images/nicholas-green-unsplash-blur.jpg");
@@ -585,7 +569,7 @@ strong {
 }
 
 /*---------------------------------------
-  ARTISTS              
+ARTISTS
 -----------------------------------------*/
 .artists-thumb {
     position: relative;
@@ -599,7 +583,7 @@ strong {
     display: block;
     width: 100%;
 }
- 
+
 .artists-thumb:hover .artists-hover {
     transform: translateY(0);
     opacity: 1;
@@ -637,16 +621,12 @@ strong {
     color: white;
 }
 
-/* .artists-hover p a:hover {
-  color: white;
-} */
-
 .artists-hover hr {
     margin: 1.5rem 0;
 }
 
 /*---------------------------------------
-  SCHEDULE              
+SCHEDULE
 -----------------------------------------*/
 /* Background Colors */
 .bg-light-pink {
@@ -824,15 +804,162 @@ f .pricing-thumb h3 small {
 }
 
 /*FRONTYARD*/
-.small-picture {
-    border-radius: var(--border-radius-medium);
-    /* Ensure this variable is defined */
-    width: 100px;
-    /* Adjust size as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
+ 
+
+
+ /* Ensure proper box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+/* Main Container */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards Container */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual Card Item */
+.cards_item {
+    display: flex;
+    padding: 1rem;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+
+/* Card */
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 30px;
+    background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px), #66afe1 0 1.2rem) right bottom / 100% 100%, linear-gradient(red 0 0) 30px 0 / 2px 100% #fff;
+    background-repeat: no-repeat;
+    line-height: 1.2rem;
+    -webkit-mask: radial-gradient(circle .8rem at 2px 50%, #0000 98%, #000) 0 0 / 100% 2.4rem;
+}
+
+/* Card Image */
+.card_image {
+    height: calc(13 * 1.2rem);
+    padding: 1.2rem 1.2rem 0;
+    position: relative;
+}
+.card_image:before, .card_image:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    left: 60%;
+    top: 0;
+    height: 45px;
+    background: #e6e6e6b8;
+    transform: rotate(45deg);
+}
+.card_image:after {
+    transform: rotate(-45deg);
+    top: auto;
+    bottom: -22px;
+    left: 40%;
+}
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card_content {
+    padding: 1.2rem;
+}
+
+/* Card Title */
+.card_title {
+    font-size: 1.3em;
+    margin: 1.2rem 0;
+}
+
+/* Card Text */
+.card_text {
+    margin: 1.2rem 0;
+}
+
+/* Global Styles */
+body {
+    font-family: monospace;
+    background: #eee;
+}
+
+html {
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .small-picture1 {
     border-radius: var(--border-radius-medium);
@@ -870,14 +997,14 @@ f .pricing-thumb h3 small {
 }
 
 /*---------------------------------------
-  CONTACT               
+CONTACT
 -----------------------------------------*/
 .google-map {
     border-radius: var(--border-radius-medium);
 }
 
 /*---------------------------------------
-  CUSTOM FORM               
+CUSTOM FORM
 -----------------------------------------*/
 .custom-form .form-control {
     color: var(--p-color);
@@ -905,7 +1032,7 @@ f .pricing-thumb h3 small {
 }
 
 /*---------------------------------------
-  SITE FOOTER              
+SITE FOOTER
 -----------------------------------------*/
 .site-footer {
     background-color: var(--dark-color);
@@ -960,7 +1087,7 @@ f .pricing-thumb h3 small {
 }
 
 /*---------------------------------------
-  SOCIAL ICON               
+SOCIAL ICON
 -----------------------------------------*/
 .social-icon {
     display: flex;
@@ -1019,7 +1146,7 @@ f .pricing-thumb h3 small {
 }
 
 /*---------------------------------------
-  RESPONSIVE STYLES               
+RESPONSIVE STYLES
 -----------------------------------------*/
 @media screen and (max-width: 991px) {
     h1 {
@@ -1228,15 +1355,11 @@ f .pricing-thumb h3 small {
     left: 0;
     width: 100%;
     height: 40px;
-    /* Height of the green banner */
-    background-color: #28a745;
-    /* Green background color */
-    z-index: -1;
-    /* Ensure it is behind the content */
-}
+background-color: #28a745;
+ z-index: -1;
+ }
 
 .games-info {
     position: relative;
     z-index: 1;
-    /* Ensure content is above the green banner */
-}
+ }
