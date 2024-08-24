@@ -1,6 +1,6 @@
 /*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
+        CUSTOM PROPERTIES ( VARIABLES )             
+        -----------------------------------------*/
 :root {
     --white-color: #ffffff;
     --primary-color: #f8cb2e;
@@ -40,8 +40,8 @@ body {
 }
 
 /*---------------------------------------
-  TYPOGRAPHY               
------------------------------------------*/
+        TYPOGRAPHY               
+        -----------------------------------------*/
 
 h2,
 h3,
@@ -198,8 +198,8 @@ strong {
 }
 
 /*---------------------------------------
-  SECTION               
------------------------------------------*/
+        SECTION
+        -----------------------------------------*/
 .section-padding {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -269,20 +269,21 @@ strong {
 }
 
 /*---------------------------------------
-+CUSTOM ICON COLOR
------------------------------------------*/
+        +CUSTOM ICON COLOR
+        -----------------------------------------*/
 .custom-icon {
-color: rgb(24, 134, 52);
+    color: rgb(24, 134, 52);
 }
 
 .custom-image-size {
-max-width: 100px; height: 50px;
+    max-width: 100px;
+    height: 50px;
 }
 
 /* TFL LOGO */
 .custom-size {
-max-width: 300px;
-height: auto;
+    max-width: 300px;
+    height: auto;
 }
 
 .img-fluid {
@@ -290,8 +291,8 @@ height: auto;
 }
 
 /*---------------------------------------
-CUSTOM BUTTON
------------------------------------------*/
+        CUSTOM + JOIN US BUTTON
+        -----------------------------------------*/
 .custom-btn {
     background: rgb(24, 134, 52);
     border: 2px solid transparent;
@@ -328,8 +329,8 @@ CUSTOM BUTTON
 }
 
 /*---------------------------------------
-VIDEO
------------------------------------------*/
+        VIDEO
+        -----------------------------------------*/
 .video-wrap {
     z-index: -100;
 }
@@ -344,8 +345,8 @@ VIDEO
 }
 
 /*---------------------------------------
-SITE HEADER
------------------------------------------*/
+        SITE HEADER
+        -----------------------------------------*/
 .site-header {
     background-color: rgb(24, 134, 52);
     padding-top: 20px;
@@ -354,8 +355,8 @@ SITE HEADER
 }
 
 /*---------------------------------------
-NAVIGATION
------------------------------------------*/
+        NAVIGATION
+        -----------------------------------------*/
 .sticky-wrapper {
     position: absolute;
     top: 0;
@@ -468,8 +469,8 @@ NAVIGATION
 }
 
 /*---------------------------------------
-HERO
------------------------------------------*/
+        HERO
+        -----------------------------------------*/
 .hero-section {
     position: relative;
     overflow: hidden;
@@ -499,8 +500,8 @@ HERO
 }
 
 /*---------------------------------------
-ABOUT
------------------------------------------*/
+        TFL XMAS
+        -----------------------------------------*/
 .about-section {
     background-image: url("../images/edward-unsplash-blur.jpg");
     background-color: #704010;
@@ -508,9 +509,9 @@ ABOUT
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-     position: relative;
+    position: relative;
     padding: 20px;
- }
+}
 
 .about-image {
     border-radius: var(--border-radius-medium);
@@ -534,54 +535,79 @@ ABOUT
 }
 
 /*---------------------------------------
-TICKET
------------------------------------------*/
-.ticket-section {
-    background-image: url("../images/nicholas-green-unsplash-blur.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    padding-top: 130px;
-}
+        TICKET
+        -----------------------------------------*/
+/* .ticket-section {
+        background-image: url("../images/nicholas-green-unsplash-blur.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        padding-top: 130px;
+        }
 
-.ticket-form {
-    background: var(--white-color);
-    border-radius: var(--border-radius-medium);
-    padding: 50px;
-}
+        .ticket-form {
+        background: var(--white-color);
+        border-radius: var(--border-radius-medium);
+        padding: 50px;
+        }
 
-.ticket-form .form-check {
-    position: relative;
-    min-height: 52px;
-    padding-left: 35px;
-}
+        .ticket-form .form-check {
+        position: relative;
+        min-height: 52px;
+        padding-left: 35px;
+        }
 
-.ticket-form .form-check .form-check-label {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 12px;
-    margin-left: 35px;
-    width: 100%;
-    height: 100%;
-}
+        .ticket-form .form-check .form-check-label {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 12px;
+        margin-left: 35px;
+        width: 100%;
+        height: 100%;
+        } */
 
 /*---------------------------------------
-ARTISTS
------------------------------------------*/
+        SCENE AT THE LOBBY ARTISTS
+        -----------------------------------------*/
+/* General styles */
+.container {
+    max-width: 1140px;
+    /* or whatever width fits your design */
+    margin: 0 auto;
+}
+
+/* Artists Thumbnail */
 .artists-thumb {
     position: relative;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    /* Increased space for better separation */
 }
 
 .artists-image {
-    border-radius: var(--border-radius-medium);
-    padding: 5px;
-    display: block;
     width: 100%;
+    height: auto;
+    /* Maintains aspect ratio */
+    border-radius: var(--border-radius-medium);
+}
+
+/* Hover effect */
+.artists-hover {
+    background-color: black;
+    border-radius: var(--border-radius-medium);
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transition: all 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
 .artists-thumb:hover .artists-hover {
@@ -589,25 +615,10 @@ ARTISTS
     opacity: 1;
 }
 
+/* Text styling within hover */
 .artists-hover p {
     color: white;
-    /* Ensure paragraph text is white */
-}
-.artists-hover {
-    background-color: black;
-    border-radius: var(--border-radius-medium);
-    backdrop-filter: blur(5px) saturate(180%);
-    -webkit-backdrop-filter: blur(5px) saturate(180%);
-    margin: 5px;
-    padding: 5px;
-    transition: all 0.5s ease;
-    transform: translateY(100%);
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    /* Adjust this value */
-    left: 20px;
-    opacity: 0;
+    margin: 0;
 }
 
 .artists-hover p strong {
@@ -625,40 +636,27 @@ ARTISTS
     margin: 1.5rem 0;
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .artists-hover {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .col-md-6 {
+        flex: 1 1 100%;
+        /* Stacks columns vertically on smaller screens */
+    }
+}
+
+
 /*---------------------------------------
-SCHEDULE
+    EVENT SCHEDULE
 -----------------------------------------*/
-/* Background Colors */
-.bg-light-pink {
-    background-color: #f3dcd4;
-}
-.bg-light-coral {
-    background-color: #ecc9c7;
-}
-.bg-light-green {
-    background-color: #d9e3da;
-}
-.bg-light-beige {
-    background-color: #d1cfc0;
-}
-
-/* Background Images */
-.pop-background {
-    background-image: url("path-to-pop-image.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.rock-background {
-    background-image: url("path-to-rock-image.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.country-background {
-    background-image: url("path-to-country-image.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
+/* Schedule Section */
 .schedule-section {
     background-image: url("../images/nainoa-shizuru-unsplash-blur.jpg");
     background-color: #242424;
@@ -666,163 +664,227 @@ SCHEDULE
     background-position: center;
     background-size: cover;
 }
+
+/* Responsive Table */
 .table-responsive {
-    filter: drop-shadow(2px 2px 4px #606060);
     overflow-x: auto;
     /* Enable horizontal scrolling for small screens */
-
+    filter: drop-shadow(2px 2px 4px #606060);
 }
 
+/* Schedule Table */
 .schedule-table {
+    table-layout: fixed;
+    width: 100%;
     border-radius: var(--border-radius-medium);
+    border-collapse: collapse;
+    border-spacing: 0;
     position: relative;
     overflow: hidden;
+    background-color: #333;
+    /* Ensures table background is visible */
 }
 
-.schedule-table .bg-warning {
-    background: #f0a5a5 !important;
+.schedule-table td,
+.schedule-table th {
+    padding: 0.75rem; /* Adjust padding for better fit */
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #363a3e;
+    color: white;
+    /* Ensures text is visible on dark backgrounds */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
+    white-space: normal; /* Allow text to wrap if needed */
+    word-break: break-word; /* Break long words to prevent overflow */
 }
 
 .schedule-table thead th {
     background-color: var(--secondary-color);
+    color: white;
 }
 
-.schedule-table td,
-.schedule-table th,
-.schedule-table tr {
-    border-bottom-color: #363a3e;
-    padding: 1rem;
-    /* Adjust padding for responsiveness */
-
-}
-
-.schedule-table tr:last-child td,
-.schedule-table tr:last-child th {
-    border-bottom-color: transparent;
-}
-
-.schedule-table thead th {
-    border-right: 1px solid #c7460a;
-    border-bottom-color: transparent;
-}
-
-.schedule-table th + td {
+.schedule-table thead th + td {
     border-bottom: 0;
 }
 
-.schedule-table thead th:last-child {
-    border-right-color: transparent;
+.schedule-table tbody td {
+    background-color: #444;
 }
 
-.schedule-table .pop-background-image {
-    background-image: url("../images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg");
+.schedule-table .bg-light-pink {
+    background-color: #f3dcd4;
 }
 
-.schedule-table .rock-background-image {
-    background-image: url("../images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg");
+.schedule-table .bg-light-coral {
+    background-color: #ecc9c7;
 }
 
-.schedule-table .country-background-image {
-    background-image: url("../images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg");
+.schedule-table .bg-light-green {
+    background-color: #d9e3da;
 }
 
+.schedule-table .bg-light-beige {
+    background-color: #928ba1;
+}
+
+/* Background images for specific rows or columns */
+.schedule-table .pop-background {
+    background-image: url("../images/pop-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.schedule-table .rock-background {
+    background-image: url("../images/rock-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.schedule-table .country-background {
+    background-image: url("../images/country-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Wrap for background images */
 .table-background-image-wrap {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: none;
     position: relative;
 }
 
+/* Text Styling */
 .schedule-table h3,
 .schedule-table p {
-    color: var(--white-color);
+    color: white;
     position: relative;
     z-index: 2;
+    margin: 0;
+    font-size: 0.875rem; /* Adjust font size for better fit */
 }
 
-/*---------------------------------------
-PRICING
------------------------------------------*/
-.pricing-section {}
-.pricing-thumb {
-    border: 5px dotted var(--dark-color);
-    border-radius: var(--border-radius-medium);
-    position: relative;
-    padding: 50px;
-}
-
-.col-md-6 {
-    margin-bottom: 20px;
-}
-f .pricing-thumb h3 small {
-    display: inline-block;
-    font-size: var(--p-font-size);
-    margin-right: 15px;
-}
-
-.pricing-list {
-    column-count: 2;
-    padding-left: 20px;
-}
-
-.pricing-list-item {
-    line-height: normal;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.pricing-tag {
-    background-color: var(--secondary-color);
-    border-radius: var(--border-radius-large);
-    color: var(--white-color);
-    font-weight: var(--font-weight-bold);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
+/* Overlay for text readability */
+.section-overlay {
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
-    margin: 20px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent dark overlay */
+    z-index: 1;
 }
 
-.pricing-tag span {
-    font-size: 180%;
-    line-height: normal;
+/* Responsive adjustments for the schedule table */
+.schedule-table h3 {
+    font-size: 1rem; /* Adjust font size for better fit */
+    margin: 0.5rem 0;
 }
 
-.pricing-thumb .link-fx-1 {
-    color: var(--primary-color);
+.schedule-table p {
+    font-size: 0.875rem; /* Adjust font size for better fit */
 }
 
-.pricing-thumb .link-fx-1:hover {
-    color: var(--link-hover-color);
+.schedule-table th {
+    padding: 1rem; /* Consistent padding */
 }
 
-/*FRONTYARD*/
+.schedule-table td,
+.schedule-table tr {
+    padding: 0.75rem; /* Consistent padding */
+}
+
+@media screen and (max-width: 767px) {
+    .schedule-table td,
+    .schedule-table th {
+        padding: 0.5rem;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        /* Adjust padding for smaller screens */
+        overflow: visible; /* Ensure content is visible */
+    }
+
+    .schedule-table h3 {
+        font-size: 0.875rem;
+        /* Adjust font size for headings in the table */
+    }
+
+    .schedule-table th {
+        font-size: 0.75rem;
+        /* Adjust font size for table headers */
+    }
+
+    .schedule-table td {
+        font-size: 0.75rem;
+        /* Adjust font size for table data */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .schedule-table td,
+    .schedule-table th {
+        padding: 0.5rem;
+    }
+
+    .schedule-table h3 {
+        font-size: 0.75rem;
+        /* Minimal font size for headings */
+    }
+
+    .schedule-table th {
+        font-size: 0.625rem;
+        /* Minimal font size for headers */
+    }
+
+    .schedule-table td {
+        font-size: 0.625rem;
+        /* Minimal font size for data */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .schedule-table td,
+    .schedule-table th {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+
+    .schedule-table h3 {
+        font-size: 0.875rem;
+    }
+
+    .schedule-table p {
+        font-size: 0.75rem;
+    }
+}
+
+/* /*---------------------------------------
+        FRONTYARD
+        -----------------------------------------*/
  
-
-
- /* Ensure proper box-sizing */
-*, *::before, *::after {
+/* General Styles for Box Model */
+/* General Styles for Box Model */
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 /* Main Container */
-.main {
+.container {
+    width: 100%;
     max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
-/* Cards Container */
+/* Card Grid Container */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     margin: 0;
     padding: 0;
 }
@@ -830,50 +892,67 @@ f .pricing-thumb h3 small {
 /* Individual Card Item */
 .cards_item {
     display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 1.5rem);
     padding: 1rem;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-/* Card */
-.card {
-    background-color: white;
-    border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding-left: 30px;
-    background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px), #66afe1 0 1.2rem) right bottom / 100% 100%, linear-gradient(red 0 0) 30px 0 / 2px 100% #fff;
-    background-repeat: no-repeat;
-    line-height: 1.2rem;
-    -webkit-mask: radial-gradient(circle .8rem at 2px 50%, #0000 98%, #000) 0 0 / 100% 2.4rem;
+/* Adjust card width and margins on smaller screens */
+@media (max-width: 1200px) {
+    .cards_item {
+        width: calc(50% - 1.5rem);
+    }
 }
 
-/* Card Image */
+@media (max-width: 768px) {
+    .cards_item {
+        width: calc(100% - 1.5rem);
+        margin-left: 1rem; /* Shifts cards slightly to the right on mobile screens */
+    }
+}
+
+/* Card Image Container */
 .card_image {
-    height: calc(13 * 1.2rem);
-    padding: 1.2rem 1.2rem 0;
+    height: 200px;
+    width: 100%;
+    padding: 1.2rem;
     position: relative;
+    overflow: hidden;
+    background: #f0f0f0;
 }
-.card_image:before, .card_image:after {
+
+/* Pseudo-elements for decoration */
+.card_image::after,
+.card_image::before {
     content: "";
     position: absolute;
     width: 20px;
-    left: 60%;
-    top: 0;
     height: 45px;
     background: #e6e6e6b8;
     transform: rotate(45deg);
+    top: 0;
+    left: 60%;
 }
-.card_image:after {
+
+.card_image::after {
     transform: rotate(-45deg);
     top: auto;
     bottom: -22px;
     left: 40%;
 }
+
+/* Image styling */
 .card_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 /* Card Content */
@@ -884,128 +963,59 @@ f .pricing-thumb h3 small {
 /* Card Title */
 .card_title {
     font-size: 1.3em;
-    margin: 1.2rem 0;
+    margin: 0.9rem 0 1.2rem;
 }
 
 /* Card Text */
 .card_text {
-    margin: 1.2rem 0;
+    margin: -.4rem 0 1.2rem;
 }
 
-/* Global Styles */
-body {
-    font-family: monospace;
-    background: #eee;
+/* Hover Effect for Cards */
+.cards_item:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+.pricing-section {
+    padding: 60px 0;
+    /* Adjust as needed */
+}
+
+.pricing-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center-align content */
+}
+
+.pricing-section .row {
+    width: 100%;
+    /* Ensure full-width for rows */
+}
+
+.cards {
+    margin: 0;
+    padding: 0;
 }
 
 html {
     font-size: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.small-picture1 {
-    border-radius: var(--border-radius-medium);
-    /* Ensure this variable is defined */
-    width: 100px;
-    /* Adjust size as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-}
-
-.r1 {
-    border-radius: var(--border-radius-medium);
-    /* Ensure this variable is defined */
-    width: 100px;
-    /* Adjust size as needed */
-    height: auto;
-    /* Maintain aspect ratio */
-    display: block;
-}
 .text-content {
     margin-left: auto;
     margin-right: 20;
 }
+
 .text-content1 {
     margin-right: auto;
     margin-left: 20px;
 }
 
-/* Select the section by its class or id */
-.games-section {
-
-    padding: 60px 0;
-    /* Adjust padding as needed */
-}
-
 /*---------------------------------------
-CONTACT
------------------------------------------*/
-.google-map {
-    border-radius: var(--border-radius-medium);
-}
-
-/*---------------------------------------
-CUSTOM FORM
------------------------------------------*/
+        CUSTOM FORM
+        -----------------------------------------*/
 .custom-form .form-control {
     color: var(--p-color);
     margin-bottom: 24px;
@@ -1032,8 +1042,8 @@ CUSTOM FORM
 }
 
 /*---------------------------------------
-SITE FOOTER
------------------------------------------*/
+        SITE FOOTER
+        -----------------------------------------*/
 .site-footer {
     background-color: var(--dark-color);
     position: relative;
@@ -1087,8 +1097,8 @@ SITE FOOTER
 }
 
 /*---------------------------------------
-SOCIAL ICON
------------------------------------------*/
+        SOCIAL ICON
+        -----------------------------------------*/
 .social-icon {
     display: flex;
     align-items: left;
@@ -1146,8 +1156,8 @@ SOCIAL ICON
 }
 
 /*---------------------------------------
-RESPONSIVE STYLES
------------------------------------------*/
+        RESPONSIVE STYLES
+        -----------------------------------------*/
 @media screen and (max-width: 991px) {
     h1 {
         font-size: 62px;
@@ -1190,8 +1200,8 @@ RESPONSIVE STYLES
     }
 
     /* .hero-section {
-    padding-top: 150px;
-  } */
+        padding-top: 150px;
+        } */
 
     /* General Section Styling */
     .hero-section {
@@ -1255,111 +1265,180 @@ RESPONSIVE STYLES
         padding: 30px;
     }
 
-    /* Ensure the table can scroll horizontally on small screens */
-    .table-responsive {
-        overflow-x: auto;
-    }
-
-    /* Responsive adjustments for the schedule table */
-    .schedule-table h3 {
-        font-size: 22px;
-    }
-
-    .schedule-table th {
-        padding: 20px;
-    }
-
-    .schedule-table td,
-    .schedule-table tr {
-        padding: 25px;
-    }
-
-    @media screen and (max-width: 767px) {
-        .schedule-table td,
-        .schedule-table th {
-            padding: 10px;
-            /* Adjust padding for smaller screens */
-        }
-
-        .schedule-table h3 {
-            font-size: 18px;
-            /* Adjust font size for headings in the table */
-        }
-
-        .schedule-table th {
-            font-size: 14px;
-            /* Adjust font size for table headers */
-        }
-
-        .schedule-table td {
-            font-size: 12px;
-            /* Adjust font size for table data */
-        }
-    }
-
     @media screen and (max-width: 480px) {
-        .schedule-table td,
-        .schedule-table th {
-            padding: 6px;
-            /* Minimal padding for very small screens */
+        h1 {
+            font-size: 52px;
         }
 
-        .schedule-table h3 {
-            font-size: 14px;
-            /* Minimal font size for headings */
+        h2 {
+            font-size: 28px;
         }
 
-        .schedule-table th {
-            font-size: 10px;
-            /* Minimal font size for headers */
+        h3 {
+            font-size: 26px;
         }
 
-        .schedule-table td {
-            font-size: 8px;
-            /* Minimal font size for data */
+        h4 {
+            font-size: 22px;
+        }
+
+        h5 {
+            font-size: 20px;
         }
     }
+
+    .green-top-banner {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .green-top-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: #28a745;
+        z-index: -1;
+    }
+/* Film Viewing Specific Styles */
+/* Film Modal Styling */
+.film-modal .modal-content {
+    background-color: #fff; /* White background for film viewing */
+    padding: 30px; /* Increased padding for better spacing */
+    max-width: 600px; /* Maximum width specific to film section */
 }
 
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 52px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 26px;
-    }
-
-    h4 {
-        font-size: 22px;
-    }
-
-    h5 {
-        font-size: 20px;
-    }
+.film-close {
+    color: #ff0000; /* Red color for close button in film modal */
+    top: 10px; /* Position adjustments */
+    left: 10px; /* Position adjustments */
 }
 
-.green-top-banner {
+/* Film Box Styling in Modal */
+.film-box {
     position: relative;
+    background: #fff; /* White background for film box */
     overflow: hidden;
+    margin: 0; /* Remove margin in modal */
+    border-radius: 0; /* No border radius for full-width image */
 }
 
-.green-top-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.film-box__image {
     width: 100%;
-    height: 40px;
-background-color: #28a745;
- z-index: -1;
- }
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image fits within the container */
+}
 
-.games-info {
+/* Film Modal Styling for Responsiveness */
+@media (min-width: 769px) {
+    .film-modal .modal-content {
+        width: 80%; /* Adjust width for larger screens */
+        margin: 5% auto; /* Center the modal */
+    }
+}
+
+@media (max-width: 768px) {
+    .film-modal .modal-content {
+        width: 90%; /* Full width for smaller screens */
+        margin: 10% auto; /* Adjust margin for mobile view */
+    }
+}
+
+/* Games Modal Styling */
+.games-modal .modal-content {
+    background-color: #fff; /* White background for games section */
+    padding: 30px; /* Increased padding for better spacing */
+    max-width: 600px; /* Maximum width specific to games section */
+}
+
+.games-close {
+    color: #0000ff; /* Blue color for close button in games modal */
+    top: 10px; /* Position adjustments */
+    left: 10px; /* Position adjustments */
+}
+
+/* Games Box Styling in Modal */
+.games-box {
     position: relative;
-    z-index: 1;
- }
+    background: #fff; /* White background for games box */
+    overflow: hidden;
+    margin: 0; /* Remove margin in modal */
+    border-radius: 0; /* No border radius for full-width image */
+}
+
+.games-box__image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image fits within the container */
+}
+
+/* Games Modal Styling for Responsiveness */
+@media (min-width: 769px) {
+    .games-modal .modal-content {
+        width: 80%; /* Adjust width for larger screens */
+        margin: 5% auto; /* Center the modal */
+    }
+}
+
+@media (max-width: 768px) {
+    .games-modal .modal-content {
+        width: 90%; /* Full width for smaller screens */
+        margin: 10% auto; /* Adjust margin for mobile view */
+    }
+}
+
+/* Button Styling for See More and Let's Play */
+.modal-btn {
+    background-color: #18a058; /* Green background color */
+    border: 2px solid #18a058; /* Border color to match background */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    color: #ffffff; /* White text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    line-height: 1.5; /* Line height */
+    padding: 12px 24px; /* Padding for better button size */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline-block for better spacing */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for Buttons */
+.modal-btn:hover {
+    background-color: #148a4d; /* Darker green for hover */
+    border-color: #148a4d; /* Darker border for hover */
+    color: #ffffff; /* Keep text color white on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Focus Effect for Accessibility */
+.modal-btn:focus {
+    outline: 2px solid #ffbf00; /* Yellow outline for focus */
+    outline-offset: 2px; /* Space between outline and button */
+}
+
+/* Styles for Game Modal Button */
+#openModalGames {
+    background-color: #1e90ff; /* Blue background color */
+    border: 2px solid #1e90ff; /* Border color to match background */
+}
+
+/* Hover Effect for Game Modal Button */
+#openModalGames:hover {
+    background-color: #1c86ee; /* Darker blue for hover */
+    border-color: #1c86ee; /* Darker border for hover */
+}
+
+/* Styles for Film Modal Button */
+#openModalFilm {
+    background-color: #ff4500; /* Orange background color */
+    border: 2px solid #ff4500; /* Border color to match background */
+}
+
+/* Hover Effect for Film Modal Button */
+#openModalFilm:hover {
+    background-color: #ff6347; /* Darker orange for hover */
+    border-color: #ff6347; /* Darker border for hover */
+}
+}
