@@ -573,87 +573,109 @@
         /*---------------------------------------
                 SCENE AT THE LOBBY ARTISTS
                 -----------------------------------------*/
-        /* General styles */
-        .container {
-            max-width: 1140px;
-            /* or whatever width fits your design */
-            margin: 0 auto;
-        }
-        
-        /* Artists Thumbnail */
-        .artists-thumb {
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 20px;
-            /* Increased space for better separation */
-        }
-        
-        .artists-image {
-            width: 100%;
-            height: auto;
-            /* Maintains aspect ratio */
-            border-radius: var(--border-radius-medium);
-        }
-        
-        /* Hover effect */
-        .artists-hover {
-            background-color: black;
-            border-radius: var(--border-radius-medium);
-            backdrop-filter: blur(5px) saturate(180%);
-            -webkit-backdrop-filter: blur(5px) saturate(180%);
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 10px;
-            transition: all 0.5s ease;
-            transform: translateY(100%);
-            opacity: 0;
-        }
-        
-        .artists-thumb:hover .artists-hover {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        /* Text styling within hover */
-        .artists-hover p {
-            color: white;
-            margin: 0;
-        }
-        
-        .artists-hover p strong {
-            color: white;
-            display: inline-block;
-            min-width: 150px;
-            margin-right: 10px;
-        }
-        
-        .artists-hover p a {
-            color: white;
-        }
-        
-        .artists-hover hr {
-            margin: 1.5rem 0;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .artists-hover {
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: 0;
-                padding: 10px;
-            }
-        
-            .col-md-6 {
-                flex: 1 1 100%;
-                /* Stacks columns vertically on smaller screens */
-            }
-        }
-        
-        
+    /*---------------------------------------
+    SCENE AT THE LOBBY ARTISTS
+-----------------------------------------*/
+
+/* General styles */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Artists Thumbnail */
+.artists-thumb {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Add border to match original styles if needed */
+}
+
+/* Image styling */
+.artists-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-medium);
+}
+
+/* Hover effect */
+.artists-hover {
+    background-color: black;
+    border-radius: var(--border-radius-medium);
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transition: all 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.artists-thumb:hover .artists-hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Text styling within hover */
+.artists-hover p {
+    color: white;
+    margin: 0;
+}
+
+.artists-hover p strong {
+    color: white;
+    display: inline-block;
+    min-width: 150px;
+    margin-right: 10px;
+}
+
+.artists-hover p a {
+    color: white;
+}
+
+.artists-hover hr {
+    margin: 1.5rem 0;
+}
+
+/* Button styling */
+.artists-btn {
+    background-color: #353839; /* Dark background color for the button */
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Adjust padding for small screens if needed */
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px; /* Adjust bottom positioning */
+    left: 5px; /* Adjust left positioning */
+    margin-top: -20px; /* Use this if necessary for fine-tuning vertical position */
+    border-radius: var(--border-radius-medium);
+    transition: background-color 0.3s ease;
+}
+
+
+.artists-btn:hover {
+    background-color: #353839;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .artists-hover {
+        bottom: 0;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .col-md-6 {
+        flex: 1 1 100%;
+        /* Stacks columns vertically on smaller screens */
+    }
+}
+
+
         /*---------------------------------------
             EVENT SCHEDULE
         -----------------------------------------*/
@@ -1320,7 +1342,7 @@
             overflow: auto; /* Enable scroll if needed */
             background-color: rgba(0,0,0,0.4); /* Black with opacity */
         }
-        
+
         /* Modal Content Styling */
         .film-modal-content {
             background-color: #fff; /* White background for film viewing */
@@ -1330,7 +1352,7 @@
             max-width: 600px; /* Max width */
             position: relative; /* Relative positioning for close button */
         }
-        
+
         /* Close Button Styling */
         .film-close {
             position: absolute;
@@ -1351,14 +1373,14 @@
             text-align: center; /* Center text */
             line-height: 1; /* Adjust line height for proper centering */
         }
-        
+
         /* Hover and Focus Styles for Close Button */
         .film-close:hover,
         .film-close:focus {
             background-color: #cc0000; /* Slightly darker red on hover/focus */
             border-color: #cc0000; /* Match border color */
         }
-        
+
         /* Film Box Styling */
         .film-box {
             position: relative;
@@ -1367,20 +1389,19 @@
             margin: 0; /* Remove margin */
             border-radius: 8px; /* Rounded corners */
         }
-        
         .film-box__image {
             width: 100%; /* Full width */
             height: auto; /* Maintain aspect ratio */
             object-fit: contain; /* Ensure image fits within container */
         }
-        
+
         /* Responsive Modal Styling */
         @media (min-width: 769px) {
             .film-modal-content {
                 width: 80%; /* Adjust width for larger screens */
             }
         }
-        
+
         @media (max-width: 768px) {
             .film-modal-content {
                 width: 90%; /* Full width for smaller screens */
@@ -1398,15 +1419,14 @@
             padding: 30px; /* Increased padding for better spacing */
             max-width: 600px; /* Maximum width specific to games section */
         }
-        
+
         .games-close {
             color:  red; /* Blue color for close button in games modal */
             top: 10px; /* Position adjustments */
             left: 10px; /* Position adjustments */
-            
+
         }
-        
-        /* Games Box Styling in Modal */
+         /* Games Box Styling in Modal */
         .games-box {
             position: relative;
             background: #fff; /* White background for games box */
@@ -1414,13 +1434,13 @@
             margin: 0; /* Remove margin in modal */
             border-radius: 0; /* No border radius for full-width image */
         }
-        
+
         .games-box__image {
             width: 100%;
             height: auto; /* Maintain aspect ratio */
             object-fit: contain; /* Ensure image fits within the container */
         }
-        
+
         /* Games Modal Styling for Responsiveness */
         @media (min-width: 769px) {
             .games-modal .modal-content {
@@ -1450,46 +1470,39 @@
             display: inline-block; /* Inline-block for better spacing */
             transition: all 0.3s ease; /* Smooth transition for hover effects */
         }
-        
-        /* Hover Effect for Buttons */
+         /* Hover Effect for Buttons */
         .modal-btn:hover {
             background-color: #148a4d; /* Darker green for hover */
             border-color: #148a4d; /* Darker border for hover */
             color: #ffffff; /* Keep text color white on hover */
             transform: translateY(-2px); /* Slight lift effect on hover */
         }
-        
         /* Focus Effect for Accessibility */
         .modal-btn:focus {
             outline: 2px solid #ffbf00; /* Yellow outline for focus */
             outline-offset: 2px; /* Space between outline and button */
         }
-        
         /* Styles for Game Modal Button */
         #openModalGames {
             background-color: #365E32; /* Blue background color */
             border: 2px solid #1e90ff; /* Border color to match background */
         }
-        
         /* Hover Effect for Game Modal Button */
         #openModalGames:hover {
             background-color: #1c86ee; /* Darker blue for hover */
             border-color: #1c86ee; /* Darker border for hover */
         }
-        
         /* Styles for Film Modal Button */
         #openModalFilm {
             background-color: #ff4500; /* Orange background color */
             border: 2px solid #ff4500; /* Border color to match background */
         }
-        
         /* Hover Effect for Film Modal Button */
         #openModalFilm:hover {
             background-color: #ff6347; /* Darker orange for hover */
             border-color: #ff6347; /* Darker border for hover */
         }
         }
-         
 
 .link-fx-1:hover .icon line {
     transform: rotate(-180deg);
@@ -1924,7 +1937,6 @@
 /* General styles */
 .container {
     max-width: 1140px;
-    /* or whatever width fits your design */
     margin: 0 auto;
 }
 
@@ -1933,14 +1945,33 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    /* Increased space for better separation */
+    border: 1px solid #ddd; /* Border for better separation */
 }
 
+/* Image styling */
 .artists-image {
     width: 100%;
     height: auto;
-    /* Maintains aspect ratio */
     border-radius: var(--border-radius-medium);
+}
+
+/* Button styling */
+.artists-btn {
+    background-color: #353839; /* Dark background color for the button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border-radius: var(--border-radius-medium);
+    transition: background-color 0.3s ease;
+}
+
+.artists-btn:hover {
+    background-color: #353839;
 }
 
 /* Hover effect */
@@ -1957,6 +1988,7 @@
     transition: all 0.5s ease;
     transform: translateY(100%);
     opacity: 0;
+    display: none; /* Start hidden */
 }
 
 .artists-thumb:hover .artists-hover {
@@ -1997,9 +2029,10 @@
 
     .col-md-6 {
         flex: 1 1 100%;
-        /* Stacks columns vertically on smaller screens */
     }
 }
+
+
 
 
 /*---------------------------------------
@@ -2540,11 +2573,6 @@ html {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding: 0;
     }
-
-    /* .hero-section {
-        padding-top: 150px;
-        } */
-
     /* General Section Styling */
     .hero-section {
         text-align: center;
@@ -2664,14 +2692,14 @@ html {
 
 /* Modal Content Styling */
 .film-modal-content {
-    background-color: #fff; /* White background for film viewing */
-    margin: 5% auto; /* Centering modal */
+    background-color: gray; /* Gray background */
+    margin: 50% auto; /* Centering modal */
     padding: 30px; /* Increased padding for better spacing */
     border-radius: 8px; /* Rounded corners */
-    max-width: 600px; /* Max width */
+    max-width: 90vw; /* Responsive max width based on viewport width */
+    width: 100%; /* Ensure it doesn't exceed max-width */
     position: relative; /* Relative positioning for close button */
 }
-
 /* Close Button Styling */
 .film-close {
     position: absolute;
@@ -2718,21 +2746,21 @@ html {
 /* Responsive Modal Styling */
 @media (min-width: 769px) {
     .film-modal-content {
-        width: 80%; /* Adjust width for larger screens */
+        max-width: 80vw; /* Slightly reduce the width on larger screens */
     }
 }
 
 @media (max-width: 768px) {
     .film-modal-content {
         width: 90%; /* Full width for smaller screens */
-        margin: 10% auto; /* Adjust margin for mobile view */
+        margin: 55% auto; /* Adjust margin for mobile view */
     }
 }
-
-
-
-
- 
+@media (min-width: 1200px) {
+    .film-modal-content {
+        max-width: 70vw; /* Further reduce width on very large screens */
+    }
+}
 
 /* Games Modal Styling */
 .games-modal .modal-content {
@@ -2745,7 +2773,7 @@ html {
     color:  red; /* Blue color for close button in games modal */
     top: 10px; /* Position adjustments */
     left: 10px; /* Position adjustments */
-    
+
 }
 
 /* Games Box Styling in Modal */
@@ -2767,14 +2795,14 @@ html {
 @media (min-width: 769px) {
     .games-modal .modal-content {
         width: 80%; /* Adjust width for larger screens */
-        margin: 5% auto; /* Center the modal */
+        margin: 55% auto; /* Center the modal */
     }
 }
 
 @media (max-width: 768px) {
     .games-modal .modal-content {
         width: 90%; /* Full width for smaller screens */
-        margin: 10% auto; /* Adjust margin for mobile view */
+        margin: 55% auto; /* Adjust margin for mobile view */
     }
 }
 
@@ -2783,7 +2811,7 @@ html {
     background-color: #18a058; /* Green background color */
     border: 2px solid #18a058; /* Border color to match background */
     border-radius: 8px; /* Rounded corners for a modern look */
-    color: #ffffff; /* White text color */
+    color: #1b1b1b; /* White text color */
     font-size: 16px; /* Font size */
     font-weight: bold; /* Bold text */
     line-height: 1.5; /* Line height */
@@ -2821,8 +2849,8 @@ html {
 
 /* Styles for Film Modal Button */
 #openModalFilm {
-    background-color: #ff4500; /* Orange background color */
-    border: 2px solid #ff4500; /* Border color to match background */
+    background-color: white; /* Orange background color */
+    border: 2px solid #365E32; /* Border color to match background */
 }
 
 /* Hover Effect for Film Modal Button */
@@ -2831,4 +2859,3 @@ html {
     border-color: #ff6347; /* Darker border for hover */
 }
 }
- 
