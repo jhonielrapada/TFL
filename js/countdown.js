@@ -1,11 +1,11 @@
-// Set the countdown date (48 hours from now)
-var target_date = new Date().getTime() + (1000 * 3600 * 48); 
+// Set the countdown date for Christmas 2024 at midnight GMT+8
+var target_date = new Date('2024-12-25T00:00:00+08:00').getTime(); 
 
-// Variables for time units
-var days, hours, minutes, seconds; 
-
-// Get the countdown container element
-var countdown = document.getElementById("tiles"); 
+// Get the countdown container elements
+var daysElem = document.getElementById("days");
+var hoursElem = document.getElementById("hours");
+var minutesElem = document.getElementById("minutes");
+var secondsElem = document.getElementById("seconds");
 
 // Initial call to display countdown
 getCountdown();
@@ -19,21 +19,20 @@ function getCountdown() {
     var seconds_left = (target_date - current_date) / 1000;
 
     // Calculate days, hours, minutes, and seconds
-    days = pad(parseInt(seconds_left / 86400));
+    var days = pad(parseInt(seconds_left / 86400));
     seconds_left %= 86400;
     
-    hours = pad(parseInt(seconds_left / 3600));
+    var hours = pad(parseInt(seconds_left / 3600));
     seconds_left %= 3600;
     
-    minutes = pad(parseInt(seconds_left / 60));
-    seconds = pad(parseInt(seconds_left % 60));
+    var minutes = pad(parseInt(seconds_left / 60));
+    var seconds = pad(parseInt(seconds_left % 60));
 
-    // Format countdown string and set it to the countdown element
-    countdown.innerHTML = 
-        "<span>" + days + "</span>" +
-        "<span>" + hours + "</span>" +
-        "<span>" + minutes + "</span>" +
-        "<span>" + seconds + "</span>"; 
+    // Set the countdown values to the elements
+    daysElem.textContent = days;
+    hoursElem.textContent = hours;
+    minutesElem.textContent = minutes;
+    secondsElem.textContent = seconds;
 }
 
 function pad(n) {
