@@ -1,1470 +1,152 @@
-/*---------------------------------------
-/*---------------------------------------
-        CUSTOM PROPERTIES ( VARIABLES )             
+ /*---------------------------------------
+        CUSTOM PROPERTIES ( VARIABLES ) 
         -----------------------------------------*/
-        :root {
-            --white-color: #ffffff;
-            --primary-color: #f8cb2e;
-            --secondary-color: #ee5007;
-            --section-bg-color: #f0f8ff;
-            --custom-btn-bg-color: #ee5007;
-            --custom-btn-bg-hover-color: #c01f27;
-            --dark-color: #000000;
-            --p-color: #717275;
-            --border-color: #7fffd4;
-            --link-hover-color: #b22727;
-        
-            --body-font-family: "Outfit", sans-serif;
-        
-            --h1-font-size: 74px;
-            --h2-font-size: 46px;
-            --h3-font-size: 32px;
-            --h4-font-size: 28px;
-            --h5-font-size: 24px;
-            --h6-font-size: 22px;
-            --p-font-size: 18px;
-            --btn-font-size: 14px;
-            --copyright-font-size: 16px;
-        
-            --border-radius-large: 100px;
-            --border-radius-medium: 20px;
-            --border-radius-small: 10px;
-        
-            --font-weight-light: 300;
-            --font-weight-normal: 400;
-            --font-weight-bold: 700;
-        }
-        
-        body {
-            background-color: var(--white-color);
-            font-family: var(--body-font-family);
-        }
-        
-        /*---------------------------------------
-                TYPOGRAPHY               
-                -----------------------------------------*/
-        
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: var(--dark-color);
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: var(--font-weight-bold);
-        }
-        
-        h1 {
-            font-size: var(--h1-font-size);
-        }
-        
-        h2 {
-            font-size: var(--h2-font-size);
-        }
-        
-        h3 {
-            font-size: var(--h3-font-size);
-        }
-        
-        h4 {
-            font-size: var(--h4-font-size);
-        }
-        
-        h5 {
-            font-size: var(--h5-font-size);
-        }
-        
-        h6 {
-            font-size: var(--h6-font-size);
-        }
-        
-        p {
-            color: var(--p-color);
-            font-size: var(--p-font-size);
-            font-weight: var(--font-weight-light);
-        }
-        
-        ul li {
-            color: var(--p-color);
-            font-size: var(--p-font-size);
-            font-weight: var(--font-weight-light);
-            display: none;
-        }
-        
-        a,
-        button {
-            touch-action: manipulation;
-            transition: all 0.3s;
-        }
-        
-        a {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            color: var(--link-hover-color);
-        }
-        
-        b,
-        strong {
-            font-weight: var(--font-weight-bold);
-        }
-        
-        .link-fx-1 {
-            color: var(--white-color);
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            height: 32px;
-            padding: 0 6px;
-            text-decoration: none;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .link-fx-1:hover {
-            color: var(--link-hover-color);
-        }
-        
-        .link-fx-1:hover::before {
-            transform: translateX(17px) scaleX(0);
-            transition: transform 0.2s;
-        }
+:root {
+    --white-color: #ffffff;
+    --primary-color: #f8cb2e;
+    --secondary-color: #ee5007;
+    --section-bg-color: #f0f8ff;
+    --custom-btn-bg-color: #ee5007;
+    --custom-btn-bg-hover-color: #c01f27;
+    --dark-color: #000000;
+    --p-color: #717275;
+    --border-color: #7fffd4;
+    --link-hover-color: #b22727;
 
-        .line2 h2 { padding: 10px 0; }
-        
-        .link-fx-1:hover .icon circle {
-            stroke-dashoffset: 200;
-            transition: stroke-dashoffset 0.2s 0.1s;
-        }
-        
-        .link-fx-1:hover .icon line {
-            transform: rotate(-180deg);
-        }
-        
-        .link-fx-1:hover .icon line:last-child {
-            transform: rotate(180deg);
-        }
-        
-        .link-fx-1::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: currentColor;
-            transform-origin: right center;
-            transition: transform 0.2s 0.1s;
-        }
-        
-        .link-fx-1 .icon {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            transform: translateX(100%) rotate(90deg);
-            font-size: 32px;
-        }
-        
-        .icon {
-            --size: 1em;
-            height: var(--size);
-            width: var(--size);
-            display: inline-block;
-            color: inherit;
-            fill: currentColor;
-            line-height: 1;
-            flex-shrink: 0;
-            max-width: initial;
-        }
-        
-        .link-fx-1 .icon circle {
-            stroke-dasharray: 100;
-            stroke-dashoffset: 100;
-            transition: stroke-dashoffset 0.2s;
-        }
-        
-        .link-fx-1 .icon line {
-            transition: transform 0.4s;
-            transform-origin: 13px 15px;
-        }
-        
-        .link-fx-1 .icon line:last-child {
-            transform-origin: 19px 15px;
-        }
-        
-        /*---------------------------------------
-                SECTION
-                -----------------------------------------*/
-        .section-padding {
-            padding-top: 100px;
-            padding-bottom: 100px;
-            
-        }
+    --body-font-family: "Outfit", sans-serif;
 
-        
-        .section-bg {
-            background-color: var(--section-bg-color);
-        }
-        
-        .section-overlay {
-            background-color: var(--dark-color);
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            width: 100%;
-            height: 100%;
-            opacity: 0.35;
-        }
-        
-        .section-overlay + .container {
-            position: relative;
-        }
-        
-        .tab-content {
-            background-color: var(--white-color);
-            border-radius: var(--border-radius-medium);
-            padding: 45px;
-        }
-        
-        .nav-tabs {
-            background-color: var(--section-bg-color);
-            border-radius: var(--border-radius-large);
-            border-bottom: 0;
-            padding: 15px;
-        }
-        
-        .nav-tabs .nav-link {
-            border-radius: var(--border-radius-large);
-            border: 0;
-            padding: 15px 25px;
-            transition: all 0.3s;
-        }
-        
-        .nav-tabs .nav-link:first-child {
-            margin-right: 15px;
-        }
-        
-        .nav-tabs .nav-item.show .nav-link,
-        .nav-tabs .nav-link.active,
-        .nav-tabs .nav-link:focus,
-        .nav-tabs .nav-link:hover {
-            background: var(--white-color);
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-            color: var(--primary-color);
-        }
-        
-        .nav-tabs h5 {
-            color: var(--p-color);
-            margin-bottom: 0;
-        }
-        
-        .nav-tabs .nav-link.active h5,
-        .nav-tabs .nav-link:focus h5,
-        .nav-tabs .nav-link:hover h5 {
-            color: var(--primary-color);
-        }
-        
-        /*---------------------------------------
-                +CUSTOM ICON COLOR
-                -----------------------------------------*/
-        .custom-icon {
-            color: rgb(24, 134, 52);
-        }
-        
-        .custom-image-size {
-            max-width: 100px;
-            height: 50px;
-        }
-        
-        /* TFL LOGO */
-        .custom-size {
-            max-width: 300px;
-            height: auto;
-        }
-        
-        .img-fluid {
-            margin-top: -20px;
-        }
-        
-        /*---------------------------------------
-                CUSTOM + JOIN US BUTTON
-                -----------------------------------------*/
-        .custom-btn {
-            background: rgb(24, 134, 52);
-            border: 2px solid transparent;
-            border-radius: var(--border-radius-large);
-            color: var(--white-color);
-            font-size: var(--btn-font-size);
-            font-weight: var(--font-weight-bold);
-            line-height: normal;
-            transition: all 0.3s;
-            padding: 10px 20px;
-        }
-        
-        .custom-btn:hover {
-            background: var(--custom-btn-bg-hover-color);
-            color: var(--white-color);
-        }
-        
-        .custom-border-btn {
-            background: transparent;
-            border: 2px solid var(--custom-btn-bg-color);
-            color: var(--custom-btn-bg-color);
-        }
-        
-        .custom-border-btn:hover,
-        .navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover {
-            background: var(--custom-btn-bg-hover-color);
-            border-color: transparent;
-            color: var(--white-color);
-        }
-        
-        .custom-btn-bg-white {
-            border-color: var(--white-color);
-            color: var(--white-color);
-        }
-        
-        /*---------------------------------------
-                VIDEO
-                -----------------------------------------*/
-        .video-wrap {
-            z-index: -100;
-        }
-        
-        .custom-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-        
-        /*---------------------------------------
-                SITE HEADER
-                -----------------------------------------*/
-        .site-header {
-            background-color: #365E32;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        
-        }
-        
-        /*---------------------------------------
-                NAVIGATION
-                -----------------------------------------*/
-        .sticky-wrapper {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            margin-top: 51px;
-        }
-        
-        .sticky-wrapper.is-sticky .navbar {
-            background-color: var(--dark-color);
-        }
-        
-        .navbar {
-            background: transparent;
-            z-index: 9;
-        }
-        
-        .navbar-brand,
-        .navbar-brand:hover {
-            color: var(--white-color);
-            font-size: var(--h5-font-size);
-            font-weight: var(--font-weight-bold);
-        }
-        
-        .navbar-expand-lg .navbar-nav .nav-link {
-            border-radius: var(--border-radius-large);
-            margin: 10px;
-            padding: 10px 20px;
-        }
-        
-        .navbar-nav .nav-link {
-            display: inline-block;
-            color: var(--white-color);
-            font-size: var(--p-font-size);
-            font-weight: var(--font-weight-normal);
-            position: relative;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-        
-        .navbar-nav .nav-link.active,
-        .navbar-nav .nav-link:hover {
-            color: var(--secondary-color);
-        }
-        
-        .navbar-toggler {
-            border: 0;
-            padding: 0;
-            cursor: pointer;
-            margin: 0;
-            width: 30px;
-            height: 35px;
-            outline: none;
-        }
-        
-        .navbar-toggler:focus {
-            outline: none;
-            box-shadow: none;
-        }
-        
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-            background: transparent;
-        }
-        
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-            transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
-            transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-            transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
-            top: 0;
-        }
-        
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
-            transform: rotate(45deg);
-        }
-        
-        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-            transform: rotate(-45deg);
-        }
-        
-        .navbar-toggler .navbar-toggler-icon {
-            background: var(--white-color);
-            transition: background 10ms 300ms ease;
-            display: block;
-            width: 30px;
-            height: 2px;
-            position: relative;
-        }
-        
-        .navbar-toggler .navbar-toggler-icon:after,
-        .navbar-toggler .navbar-toggler-icon:before {
-            transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
-            transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-            transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
-            position: absolute;
-            right: 0;
-            left: 0;
-            background: var(--white-color);
-            width: 30px;
-            height: 2px;
-            content: "";
-        }
-        
-        .navbar-toggler .navbar-toggler-icon::before {
-            top: -8px;
-        }
-        
-        .navbar-toggler .navbar-toggler-icon::after {
-            top: 8px;
-        }
-        
-        .nav-tabs {
-            background-color: var(--section-bg-color);
-            border-radius: var(--border-radius-large);
-            border-bottom: 0;
-            padding: 15px;
-        }
-        
-        .nav-tabs .nav-link {
-            border-radius: var(--border-radius-large);
-            border: 0;
-            padding: 15px 25px;
-            transition: all 0.3s;
-        }
-        
-        .nav-tabs .nav-link:first-child {
-            margin-right: 15px;
-        }
-        
-        .nav-tabs .nav-item.show .nav-link,
-        .nav-tabs .nav-link.active,
-        .nav-tabs .nav-link:focus,
-        .nav-tabs .nav-link:hover {
-            background: var(--white-color);
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-            color: var(--primary-color);
-        }
-        
-        .nav-tabs h5 {
-            color: var(--p-color);
-            margin-bottom: 0;
-        }
-        
-        .nav-tabs .nav-link.active h5,
-        .nav-tabs .nav-link:focus h5,
-        .nav-tabs .nav-link:hover h5 {
-            color: var(--primary-color);
-        }
-        /*---------------------------------------
-                HERO
-                -----------------------------------------*/
-        .hero-section {
-            position: relative;
-            overflow: hidden;
-            padding-top: 60px;
-            height: calc(100vh - 51px);
-        }
-        
-        .hero-section small {
-            color: var(--white-color);
-            text-transform: uppercase;
-        }
-        
-        .hero-section .section-overlay {
-            z-index: 2;
-            opacity: 0.45;
-        }
-        
-        .hero-section .container {
-            position: relative;
-            z-index: 2;
-            height: 100%;
-            padding-bottom: 50px;
-        }
-        
-        .hero-section .container .row {
-            height: 100%;
-        }
-        
-        /*---------------------------------------
-                TFL XMAS
-                -----------------------------------------*/
-        .about-section {
-            background-image: url("../images/edward-unsplash-blur.jpg");
-            background-color: #704010;
-            /* Fallback color */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            padding: 20px;
-        }
-        
-        .about-image {
-            border-radius: var(--border-radius-medium);
-            height: auto;
-            position: relative;
-            margin: 0 auto;
-        }
-        
-        .about-text-wrap {
-            position: relative;
-        }
-        
-        .about-text-icon {
-            background: var(--primary-color);
-            border-radius: 100%;
-            font-size: var(--h3-font-size);
-            width: 70px;
-            height: 70px;
-            line-height: 70px;
-            text-align: center;
-        }
-        
-        /*---------------------------------------
-                TICKET
-                -----------------------------------------*/
-        /* .ticket-section {
-                background-image: url("../images/nicholas-green-unsplash-blur.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                position: relative;
-                padding-top: 130px;
-                }
-        
-                .ticket-form {
-                background: var(--white-color);
-                border-radius: var(--border-radius-medium);
-                padding: 50px;
-                }
-        
-                .ticket-form .form-check {
-                position: relative;
-                min-height: 52px;
-                padding-left: 35px;
-                }
-        
-                .ticket-form .form-check .form-check-label {
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                margin-top: 12px;
-                margin-left: 35px;
-                width: 100%;
-                height: 100%;
-                } */
-        
-        /*---------------------------------------
-                SCENE AT THE LOBBY ARTISTS
-                -----------------------------------------*/
-    /*---------------------------------------
-    SCENE AT THE LOBBY ARTISTS
------------------------------------------*/
+    --h1-font-size: 74px;
+    --h2-font-size: 46px;
+    --h3-font-size: 32px;
+    --h4-font-size: 28px;
+    --h5-font-size: 24px;
+    --h6-font-size: 22px;
+    --p-font-size: 18px;
+    --btn-font-size: 14px;
+    --copyright-font-size: 16px;
 
-/* General styles */
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
+    --border-radius-large: 100px;
+    --border-radius-medium: 20px;
+    --border-radius-small: 10px;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
 }
 
-/* Artists Thumbnail */
-.artists-thumb {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
-    border: 1px solid #ddd; /* Add border to match original styles if needed */
+body {
+    background-color: var(--white-color);
+    font-family: var(--body-font-family);
 }
 
-/* Image styling */
-.artists-image {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius-medium);
+/*---------------------------------------
+                TYPOGRAPHY 
+                -----------------------------------------*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-bold);
 }
 
-/* Hover effect */
-.artists-hover {
-    background-color: black;
-    border-radius: var(--border-radius-medium);
-    backdrop-filter: blur(5px) saturate(180%);
-    -webkit-backdrop-filter: blur(5px) saturate(180%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    transition: all 0.5s ease;
-    transform: translateY(100%);
-    opacity: 0;
+h1 {
+    font-size: var(--h1-font-size);
 }
 
-.artists-thumb:hover .artists-hover {
-    transform: translateY(0);
-    opacity: 1;
+h2 {
+    font-size: var(--h2-font-size);
 }
 
-/* Text styling within hover */
-.artists-hover p {
-    color: white;
-    margin: 0;
+h3 {
+    font-size: var(--h3-font-size);
 }
 
-.artists-hover p strong {
-    color: white;
+h4 {
+    font-size: var(--h4-font-size);
+}
+
+h5 {
+    font-size: var(--h5-font-size);
+}
+
+h6 {
+    font-size: var(--h6-font-size);
+}
+
+p {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+}
+
+ul li {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+    display: none;
+}
+
+a,
+button {
+    touch-action: manipulation;
+    transition: all 0.3s;
+}
+
+a {
     display: inline-block;
-    min-width: 150px;
-    margin-right: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-.artists-hover p a {
-    color: white;
+a:hover {
+    color: var(--link-hover-color);
 }
 
-.artists-hover hr {
-    margin: 1.5rem 0;
+b,
+strong {
+    font-weight: var(--font-weight-bold);
 }
 
-/* Button styling */
-.artists-btn {
-    background-color: #353839; /* Dark background color for the button */
-    color: white;
-    border: none;
-    padding: 5px 10px; /* Adjust padding for small screens if needed */
-    font-size: 14px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 5px; /* Adjust bottom positioning */
-    left: 5px; /* Adjust left positioning */
-    margin-top: -20px; /* Use this if necessary for fine-tuning vertical position */
-    border-radius: var(--border-radius-medium);
-    transition: background-color 0.3s ease;
+.link-fx-1 {
+    color: var(--white-color);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 6px;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-
-.artists-btn:hover {
-    background-color: #353839;
+.link-fx-1:hover {
+    color: var(--link-hover-color);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .artists-hover {
-        bottom: 0;
-        margin: 0;
-        padding: 10px;
-    }
-
-    .col-md-6 {
-        flex: 1 1 100%;
-        /* Stacks columns vertically on smaller screens */
-    }
+.link-fx-1:hover::before {
+    transform: translateX(17px) scaleX(0);
+    transition: transform 0.2s;
 }
 
-/*important*/
-@media (max-width: 425px){
-    .sticky-wrapper { top: -6%; height: none; }
-    .site-header { display: none; }
-
-
-    
+.line2 h2 {
+    padding: 10px 0;
 }
 
+.link-fx-1:hover .icon circle {
+    stroke-dashoffset: 200;
+    transition: stroke-dashoffset 0.2s 0.1s;
+}
 
-        /*---------------------------------------
-            EVENT SCHEDULE
-        -----------------------------------------*/
-        /* Schedule Section */
-        .schedule-section {
-            background-image: url("../images/st.jpg");
-            background-color: #242424;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-        
-        /* Responsive Table */
-        .table-responsive {
-            overflow-x: auto;
-            /* Enable horizontal scrolling for small screens */
-            filter: drop-shadow(2px 2px 4px #606060);
-        }
-        
-        /* Schedule Table */
-        .schedule-table {
-            table-layout: fixed;
-            width: 100%;
-            border-radius: var(--border-radius-medium);
-            border-collapse: collapse;
-            border-spacing: 0;
-            position: relative;
-            overflow: hidden;
-            background-color:  #353839;
-            /* Ensures table background is visible */
-        }
-        
-        .schedule-table td,
-        .schedule-table th {
-            padding: 0.75rem; /* Adjust padding for better fit */
-            text-align: center;
-            vertical-align: middle;
-            border: 1px solid #363a3e;
-            color: white;
-            /* Ensures text is visible on dark backgrounds */
-            overflow: hidden; /* Hide overflowing text */
-            text-overflow: ellipsis; /* Show ellipsis (...) for overflow */
-            white-space: normal; /* Allow text to wrap if needed */
-            word-break: break-word; /* Break long words to prevent overflow */
-        }
-        
-        .schedule-table thead th {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-        
-        .schedule-table thead th + td {
-            border-bottom: 0;
-        }
-        
-        .schedule-table tbody td {
-            background-color: #444;
-        }
-        
-        .schedule-table .bg-light-pink {
-            background-color: #f3dcd4;
-        }
-        
-        .schedule-table .bg-light-coral {
-            background-color: #ecc9c7;
-        }
-        
-        .schedule-table .bg-light-green {
-            background-color: #d9e3da;
-        }
-        
-        .schedule-table .bg-light-beige {
-            background-color: #928ba1;
-        }
-        
-        /* Background images for specific rows or columns */
-        .schedule-table .pop-background {
-            background-image: url("../images/pop-background.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .schedule-table .rock-background {
-            background-image: url("../images/rock-background.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .schedule-table .country-background {
-            background-image: url("../images/country-background.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-        
-        /* Wrap for background images */
-        .table-background-image-wrap {
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-        }
-        
-        /* Text Styling */
-        .schedule-table h3,
-        .schedule-table p {
-            color: white;
-            position: relative;
-            z-index: 2;
-            margin: 0;
-            font-size: 0.875rem; /* Adjust font size for better fit */
-        }
-        
-        /* Overlay for text readability */
-        .section-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            /* Semi-transparent dark overlay */
-            z-index: 1;
-        }
-        
-        /* Responsive adjustments for the schedule table */
-        .schedule-table h3 {
-            font-size: 1rem; /* Adjust font size for better fit */
-            margin: 0.5rem 0;
-        }
-        
-        .schedule-table p {
-            font-size: 0.875rem; /* Adjust font size for better fit */
-        }
-        
-        .schedule-table th {
-            padding: 1rem; /* Consistent padding */
-        }
-        
-        .schedule-table td,
-        .schedule-table tr {
-            padding: 0.75rem; /* Consistent padding */
-        }
-        
-        @media screen and (max-width: 767px) {
-            .schedule-table td,
-            .schedule-table th {
-                padding: 0.5rem;
-                border: 1px solid #ffffff;
-                box-sizing: border-box;
-                /* Adjust padding for smaller screens */
-                overflow: visible; /* Ensure content is visible */
-            }
-        
-            .schedule-table h3 {
-                font-size: 0.875rem;
-                /* Adjust font size for headings in the table */
-            }
-        
-            .schedule-table th {
-                font-size: 0.75rem;
-                /* Adjust font size for table headers */
-            }
-        
-            .schedule-table td {
-                font-size: 0.75rem;
-                /* Adjust font size for table data */
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .schedule-table td,
-            .schedule-table th {
-                padding: 0.5rem;
-            }
-        
-            .schedule-table h3 {
-                font-size: 0.75rem;
-                /* Minimal font size for headings */
-            }
-        
-            .schedule-table th {
-                font-size: 0.625rem;
-                /* Minimal font size for headers */
-            }
-        
-            .schedule-table td {
-                font-size: 0.625rem;
-                /* Minimal font size for data */
-            }
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .schedule-table td,
-            .schedule-table th {
-                font-size: 0.875rem;
-                padding: 0.5rem;
-            }
-        
-            .schedule-table h3 {
-                font-size: 0.875rem;
-            }
-        
-            .schedule-table p {
-                font-size: 0.75rem;
-            }
-        }
-        
-        /* /*---------------------------------------
-                FRONTYARD
-                -----------------------------------------*/
-         
-        /* General Styles for Box Model */
-        /* General Styles for Box Model */
-        *::after,
-        *::before {
-            box-sizing: border-box;
-        }
-        
-        /* Main Container */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 15px;
-            margin: 0 auto;
-        }
-        
-        /* Card Grid Container */
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Individual Card Item */
-        .cards_item {
-            display: flex;
-            flex-direction: column;
-            width: calc(33.333% - 1.5rem);
-            padding: 1rem;
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
-            background: #fff;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-sizing: border-box;
-            margin: 0;
-        }
-        
-        /* Adjust card width and margins on smaller screens */
-        @media (max-width: 1200px) {
-            .cards_item {
-                width: calc(50% - 1.5rem);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .cards_item {
-                width: calc(100% - 1.5rem);
-                margin-left: 1rem; /* Shifts cards slightly to the right on mobile screens */
-            }
-        }
-        
-        /* Card Image Container */
-        .card_image {
-            height: 200px;
-            width: 100%;
-            padding: 1.2rem;
-            position: relative;
-            overflow: hidden;
-            background: #f0f0f0;
-        }
-        
-        /* Pseudo-elements for decoration */
-        .card_image::after,
-        .card_image::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 45px;
-            background: #e6e6e6b8;
-            transform: rotate(45deg);
-            top: 0;
-            left: 60%;
-        }
-        
-        .card_image::after {
-            transform: rotate(-45deg);
-            top: auto;
-            bottom: -22px;
-            left: 40%;
-        }
-        
-        /* Image styling */
-        .card_image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        /* Card Content */
-        .card_content {
-            padding: 1.2rem;
-        }
-        
-        /* Card Title */
-        .card_title {
-            font-size: 1.3em;
-            margin: 0.9rem 0 1.2rem;
-        }
-        
-        /* Card Text */
-        .card_text {
-            margin: -.4rem 0 1.2rem;
-        }
-        
-        /* Hover Effect for Cards */
-        .cards_item:hover {
-            transform: scale(1.02);
-            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
-        }
-        
-        .pricing-section {
-            padding: 60px 0;
-            /* Adjust as needed */
-        }
-        
-        .pricing-section .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Center-align content */
-        }
-        
-        .pricing-section .row {
-            width: 100%;
-            /* Ensure full-width for rows */
-        }
-        
-        .cards {
-            margin: 0;
-            padding: 0;
-        }
-        
-        html {
-            font-size: 15px;
-        }
-        
-        .text-content {
-            margin-left: auto;
-            margin-right: 20;
-        }
-        
-        .text-content1 {
-            margin-right: auto;
-            margin-left: 20px;
-        }
-        
-        /*---------------------------------------
-                CUSTOM FORM
-                -----------------------------------------*/
-        .custom-form .form-control {
-            color: var(--p-color);
-            margin-bottom: 24px;
-            padding-top: 13px;
-            padding-bottom: 13px;
-            outline: none;
-        }
-        
-        .custom-form button[type="submit"] {
-            background: var(--custom-btn-bg-color);
-            border: none;
-            border-radius: var(--border-radius-large);
-            color: var(--white-color);
-            font-size: var(--p-font-size);
-            font-weight: var(--font-weight-medium);
-            transition: all 0.3s;
-            margin-bottom: 0;
-        }
-        
-        .custom-form button[type="submit"]:hover,
-        .custom-form button[type="submit"]:focus {
-            background: var(--custom-btn-bg-hover-color);
-            border-color: transparent;
-        }
-        
-        /*---------------------------------------
-                SITE FOOTER
-                -----------------------------------------*/
-        .site-footer {
-            background-color: var(--dark-color);
-            position: relative;
-            overflow: hidden;
-            padding-bottom: 30px;
-        }
-        
-        .site-footer-top {
-            background-color: black;
-            background-image: url("../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg");
-            background-repeat: no-repeat;
-            margin-bottom: 70px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        
-        .site-footer-bottom {
-            border-top: 1px solid #1f1c1c;
-            margin-top: 60px;
-        }
-        
-        .site-footer-title {
-            color: var(--primary-color);
-        }
-        
-        .copyright-text,
-        .site-footer-link {
-            color: var(--white-color);
-        }
-        
-        .site-footer-links {
-            padding-left: 0;
-        }
-        
-        .site-footer-link-item {
-            list-style: none;
-            display: inline-block;
-            margin-right: 15px;
-            color: orange;
-        
-        }
-        
-        .copyright-text {
-            font-size: var(--copyright-font-size);
-        }
-        
-        /* Adjust margin for the titles and text */
-        .site-footer-title {
-            margin-top: -70px;
-            /* Adjust as needed */
-        }
-        
-        /*---------------------------------------
-                SOCIAL ICON
-                -----------------------------------------*/
-        .social-icon {
-            display: flex;
-            align-items: left;
-            /* Aligns items vertically */
-            margin-left: -30px;
-            /* Adjust this value as needed to move icons left */
-        
-        }
-        
-        .social-icon-item {
-            list-style: none;
-            display: flex;
-            /* Changed from inline-block to flex */
-            align-items: left;
-            /* Ensures vertical alignment */
-        }
-        
-        .social-icon-link {
-            background: #365E32;
-            border-radius: var(--border-radius-large);
-            color: var(--white-color);
-            font-size: var(--copyright-font-size);
-            display: flex;
-            margin-right: 10px;
-            text-align: center;
-            width: 35px;
-            height: 35px;
-            line-height: 36px;
-            transition: background 0.2s, color 0.2s;
-            align-items: center;
-            justify-content: center;
-        
-        }
-        
-        .social-icon-link:hover {
-            background: var(--primary-color);
-            color: var(--white-color);
-        }
-        
-        .social-icon-link span {
-            display: block;
-        }
-        
-        .social-icon-link span:hover::before {
-            animation: spinAround 2s linear infinite;
-        }
-        
-        @keyframes spinAround {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        
-        /*---------------------------------------
-                RESPONSIVE STYLES
-                -----------------------------------------*/
-        @media screen and (max-width: 991px) {
-            h1 {
-                font-size: 62px;
-            }
-        
-            h2 {
-                font-size: 36px;
-            }
-        
-            h3 {
-                font-size: 32px;
-            }
-        
-            h4 {
-                font-size: 28px;
-            }
-        
-            h5 {
-                font-size: 20px;
-            }
-        
-            h6 {
-                font-size: 18px;
-            }
-        
-            .section-padding {
-                padding: 50px 0;
-            }
-        
-            .navbar {
-                background-color: var(--dark-color);
-            }
-        
-            .navbar-expand-lg .navbar-nav {
-                padding-bottom: 30px;
-            }
-        
-            .navbar-expand-lg .navbar-nav .nav-link {
-                padding: 0;
-            }
-        
-            /* .hero-section {
-                padding-top: 150px;
-                } */
-        
-            /* General Section Styling */
-            .hero-section {
-                text-align: center;
-                /* Center-align text and image */
-                display: flex;
-                flex-direction: column;
-                /* Stack items vertically */
-                justify-content: center;
-                /* Center items vertically */
-                align-items: center;
-                /* Center items horizontally */
-            }
-        
-            .hero-section img {
-                max-width: 100px;
-                /* Limit image width */
-                height: auto;
-                /* Maintain aspect ratio */
-                margin-bottom: 20px;
-                /* Space below the image */
-            }
-        
-            /* Optional: Responsive Font Sizes */
-            @media (max-width: 508px) {
-                .hero-section h1 {
-                    font-size: 3.5rem;
-                    /* Adjust size for smaller screens */
-                }
-        
-                .hero-section h2 {
-                    font-size: 1.5rem;
-                    /* Adjust size for smaller screens */
-                }
-                .hero-section h3 {
-                    font-size: 1.5rem;
-                    /* Adjust size for smaller screens */
-                }
-        
-                .hero-section h4 {
-                    font-size: 0.875rem;
-                    /* Further adjust size for smaller screens */
-                }
-            }
-        
-            /* Button Styling */
-            .hero-section .btn {
-                margin-top: 30px;
-                /* Space above the button */
-            }
-        
-            .pricing-thumb {
-                padding: 35px;
-            }
-        
-            .ticket-section {
-                padding-top: 130px;
-            }
-        
-            .ticket-form {
-                padding: 30px;
-            }
-        
-            @media screen and (max-width: 480px) {
-                h1 {
-                    font-size: 52px;
-                }
-        
-                h2 {
-                    font-size: 28px;
-                }
-        
-                h3 {
-                    font-size: 26px;
-                }
-        
-                h4 {
-                    font-size: 22px;
-                }
-        
-                h5 {
-                    font-size: 20px;
-                }
-            }
-        
-            .green-top-banner {
-                position: relative;
-                overflow: hidden;
-            }
-        
-            .green-top-banner::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 40px;
-                 z-index: -1;
-            }
-        
-        /* Film Modal Styling */
-        
-        .film-section {
-            background-color: #365E32; /* Light grey background color for contrast */
-            padding: 40px 0; /* Adjust padding for top and bottom spacing */
-        }
-        .film-modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.4); /* Black with opacity */
-        }
-
-        /* Modal Content Styling */
-        .film-modal-content {
-            background-color: #fff; /* White background for film viewing */
-            margin: 5% auto; /* Centering modal */
-            padding: 30px; /* Increased padding for better spacing */
-            border-radius: 8px; /* Rounded corners */
-            max-width: 600px; /* Max width */
-            position: relative; /* Relative positioning for close button */
-        }
-
-        /* Close Button Styling */
-        .film-close {
-            position: absolute;
-            top: 5px;
-            right: 5px; /* Positioned to the top-right corner */
-            background-color: #ff0000; /* Red background color */
-            color: #fff; /* White text color */
-            border: 1px solid #ff0000; /* Border color matching the background */
-            border-radius: 50%; /* Circular shape */
-            width: 30px; /* Smaller width */
-            height: 30px; /* Smaller height */
-            display: flex; /* Flexbox for centering */
-            align-items: center; /* Center text vertically */
-            justify-content: center; /* Center text horizontally */
-            font-size: 18px; /* Font size for icon */
-            cursor: pointer; /* Pointer cursor on hover */
-            transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-            text-align: center; /* Center text */
-            line-height: 1; /* Adjust line height for proper centering */
-        }
-
-        /* Hover and Focus Styles for Close Button */
-        .film-close:hover,
-        .film-close:focus {
-            background-color: #cc0000; /* Slightly darker red on hover/focus */
-            border-color: #cc0000; /* Match border color */
-        }
-
-        /* Film Box Styling */
-        .film-box {
-            position: relative;
-            background: #fff; /* White background */
-            overflow: hidden; /* Hide overflow */
-            margin: 0; /* Remove margin */
-            border-radius: 8px; /* Rounded corners */
-        }
-        .film-box__image {
-            width: 100%; /* Full width */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure image fits within container */
-        }
-
-        /* Responsive Modal Styling */
-        @media (min-width: 769px) {
-            .film-modal-content {
-                width: 80%; /* Adjust width for larger screens */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .film-modal-content {
-                width: 90%; /* Full width for smaller screens */
-                margin: 10% auto; /* Adjust margin for mobile view */
-            }
-        }
-        @media (max-width: 768px) {
-            .film-section {
-                background-color: #365E32; /* Ensure the background color is set */
-            }
-        }
-        
 .link-fx-1:hover .icon line {
     transform: rotate(-180deg);
 }
@@ -1521,12 +203,13 @@
 }
 
 /*---------------------------------------
-        SECTION
-        -----------------------------------------*/
+SECTION
+-----------------------------------------*/
 .section-padding {
     padding-top: 100px;
     padding-bottom: 100px;
- }
+
+}
 
 .section-bg {
     background-color: var(--section-bg-color);
@@ -1553,11 +236,47 @@
     padding: 45px;
 }
 
+.nav-tabs {
+    background-color: var(--section-bg-color);
+    border-radius: var(--border-radius-large);
+    border-bottom: 0;
+    padding: 15px;
+}
 
+.nav-tabs .nav-link {
+    border-radius: var(--border-radius-large);
+    border: 0;
+    padding: 15px 25px;
+    transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:first-child {
+    margin-right: 15px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    background: var(--white-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    color: var(--primary-color);
+}
+
+.nav-tabs h5 {
+    color: var(--p-color);
+    margin-bottom: 0;
+}
+
+.nav-tabs .nav-link.active h5,
+.nav-tabs .nav-link:focus h5,
+.nav-tabs .nav-link:hover h5 {
+    color: var(--primary-color);
+}
 
 /*---------------------------------------
-        +CUSTOM ICON COLOR
-        -----------------------------------------*/
++CUSTOM ICON COLOR
+-----------------------------------------*/
 .custom-icon {
     color: rgb(24, 134, 52);
 }
@@ -1578,8 +297,8 @@
 }
 
 /*---------------------------------------
-        CUSTOM + JOIN US BUTTON
-        -----------------------------------------*/
+CUSTOM + JOIN US BUTTON
+-----------------------------------------*/
 .custom-btn {
     background: rgb(24, 134, 52);
     border: 2px solid transparent;
@@ -1616,8 +335,8 @@
 }
 
 /*---------------------------------------
-        VIDEO
-        -----------------------------------------*/
+VIDEO
+-----------------------------------------*/
 .video-wrap {
     z-index: -100;
 }
@@ -1632,8 +351,8 @@
 }
 
 /*---------------------------------------
-        SITE HEADER
-        -----------------------------------------*/
+SITE HEADER
+-----------------------------------------*/
 .site-header {
     background-color: #365E32;
     padding-top: 20px;
@@ -1641,10 +360,165 @@
 
 }
 
-
 /*---------------------------------------
-        HERO
-        -----------------------------------------*/
+NAVIGATION
+-----------------------------------------*/
+.sticky-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 51px;
+}
+
+.sticky-wrapper.is-sticky .navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar {
+    background: transparent;
+    z-index: 9;
+}
+
+/* Ensure the navbar is visible with proper color */
+.navbar {
+    background-color: var(--dark-color); /* This will override transparency */
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+    color: var(--white-color);
+    font-size: var(--h5-font-size);
+    font-weight: var(--font-weight-bold);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    border-radius: var(--border-radius-large);
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    display: inline-block;
+    color: var(--white-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-normal);
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0;
+    width: 30px;
+    height: 35px;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+    top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+    transform: rotate(-45deg);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background: var(--white-color);
+    transition: background 10ms 300ms ease;
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: relative;
+}
+
+.navbar-toggler .navbar-toggler-icon:after,
+.navbar-toggler .navbar-toggler-icon:before {
+    transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: var(--white-color);
+    width: 30px;
+    height: 2px;
+    content: "";
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.nav-tabs {
+    background-color: var(--section-bg-color);
+    border-radius: var(--border-radius-large);
+    border-bottom: 0;
+    padding: 15px;
+}
+
+.nav-tabs .nav-link {
+    border-radius: var(--border-radius-large);
+    border: 0;
+    padding: 15px 25px;
+    transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:first-child {
+    margin-right: 15px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    background: var(--white-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    color: var(--primary-color);
+}
+
+.nav-tabs h5 {
+    color: var(--p-color);
+    margin-bottom: 0;
+}
+
+.nav-tabs .nav-link.active h5,
+.nav-tabs .nav-link:focus h5,
+.nav-tabs .nav-link:hover h5 {
+    color: var(--primary-color);
+}
+/*---------------------------------------
+HERO
+-----------------------------------------*/
 .hero-section {
     position: relative;
     overflow: hidden;
@@ -1673,9 +547,10 @@
     height: 100%;
 }
 
+
 /*---------------------------------------
-        TFL XMAS
-        -----------------------------------------*/
+TFL XMAS
+-----------------------------------------*/
 .about-section {
     background-image: url("../images/edward-unsplash-blur.jpg");
     background-color: #704010;
@@ -1707,45 +582,10 @@
     line-height: 70px;
     text-align: center;
 }
-
 /*---------------------------------------
-        TICKET
-        -----------------------------------------*/
-/* .ticket-section {
-        background-image: url("../images/nicholas-green-unsplash-blur.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        padding-top: 130px;
-        }
+    SCENE AT THE LOBBY ARTISTS
+-----------------------------------------*/
 
-        .ticket-form {
-        background: var(--white-color);
-        border-radius: var(--border-radius-medium);
-        padding: 50px;
-        }
-
-        .ticket-form .form-check {
-        position: relative;
-        min-height: 52px;
-        padding-left: 35px;
-        }
-
-        .ticket-form .form-check .form-check-label {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 12px;
-        margin-left: 35px;
-        width: 100%;
-        height: 100%;
-        } */
-
-/*---------------------------------------
-        SCENE AT THE LOBBY ARTISTS
-        -----------------------------------------*/
 /* General styles */
 .container {
     max-width: 1140px;
@@ -1757,7 +597,8 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    border: 1px solid #ddd; /* Border for better separation */
+    border: 1px solid #ddd;
+    /* Add border to match original styles if needed */
 }
 
 /* Image styling */
@@ -1765,25 +606,6 @@
     width: 100%;
     height: auto;
     border-radius: var(--border-radius-medium);
-}
-
-/* Button styling */
-.artists-btn {
-    background-color: #353839; /* Dark background color for the button */
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    border-radius: var(--border-radius-medium);
-    transition: background-color 0.3s ease;
-}
-
-.artists-btn:hover {
-    background-color: #353839;
 }
 
 /* Hover effect */
@@ -1800,7 +622,6 @@
     transition: all 0.5s ease;
     transform: translateY(100%);
     opacity: 0;
-    display: none; /* Start hidden */
 }
 
 .artists-thumb:hover .artists-hover {
@@ -1829,11 +650,21 @@
     margin: 1.5rem 0;
 }
 
+/* Button styling */
+.artists-btn {
+    background-color: #353839;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.artists-btn:hover {
+    background-color: #353839;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .artists-hover {
-        left: 0;
-        right: 0;
         bottom: 0;
         margin: 0;
         padding: 10px;
@@ -1841,93 +672,48 @@
 
     .col-md-6 {
         flex: 1 1 100%;
+        /* Stacks columns vertically on smaller screens */
     }
 }
 
+/*important*/
+@media (max-width: 425px) {
+    .sticky-wrapper {
+        top: -6%;
+        height: none;
+    }
+    .site-header {
+        display: none;
+    }
 
-
+}
 
 /*---------------------------------------
-    EVENT SCHEDULE
+EVENT SCHEDULE
 -----------------------------------------*/
 /* Schedule Section */
 .schedule-section {
-    background-image: url("../images/star.jpg");
-    background-color: #1b1b1b; /* Darker background color */
+    background-image: url("../images/st.jpg");
+    background-color: #242424;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-
-/* Modal Styles */
-.modal-event {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
+.section-overlay {
+    position: absolute;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.modal-event .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-    max-width: 500px;
-}
+/*---------------------------------------
+FRONTYARD
+-----------------------------------------*/
 
-.eventmodal-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.eventmodal-close:hover,
-.eventmodal-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* See More Button */
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Text Styles */
-.text-white {
-    color: white;
-}
-
-.mb-4 {
-    margin-bottom: 1.5rem;
-}
-
-.section-padding {
-    padding: 60px 0;
-}
-
-
-/* /*---------------------------------------
-        FRONTYARD
-        -----------------------------------------*/
-/* General Styles for Box Model */
+ /* General Styles for Box Model */
 *::after,
 *::before {
     box-sizing: border-box;
@@ -1964,6 +750,20 @@
     margin: 0;
 }
 
+/* Adjust card width and margins on smaller screens */
+@media (max-width: 1200px) {
+    .cards_item {
+        width: calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards_item {
+        width: calc(100% - 1.5rem);
+        margin-left: 1rem;
+        /* Shifts cards slightly to the right on mobile screens */
+    }
+}
 
 /* Card Image Container */
 .card_image {
@@ -2062,36 +862,8 @@ html {
 }
 
 /*---------------------------------------
-        CUSTOM FORM
-        -----------------------------------------*/
-.custom-form .form-control {
-    color: var(--p-color);
-    margin-bottom: 24px;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    outline: none;
-}
-
-.custom-form button[type="submit"] {
-    background: var(--custom-btn-bg-color);
-    border: none;
-    border-radius: var(--border-radius-large);
-    color: var(--white-color);
-    font-size: var(--p-font-size);
-    font-weight: var(--font-weight-medium);
-    transition: all 0.3s;
-    margin-bottom: 0;
-}
-
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
-    background: var(--custom-btn-bg-hover-color);
-    border-color: transparent;
-}
-
-/*---------------------------------------
-        SITE FOOTER
-        -----------------------------------------*/
+SITE FOOTER
+-----------------------------------------*/
 .site-footer {
     background-color: var(--dark-color);
     position: relative;
@@ -2138,15 +910,11 @@ html {
     font-size: var(--copyright-font-size);
 }
 
-/* Adjust margin for the titles and text */
-.site-footer-title {
-    margin-top: -70px;
-    /* Adjust as needed */
-}
+
 
 /*---------------------------------------
-        SOCIAL ICON
-        -----------------------------------------*/
+SOCIAL ICON
+-----------------------------------------*/
 .social-icon {
     display: flex;
     align-items: left;
@@ -2203,211 +971,1159 @@ html {
     }
 }
 
+/*---------------------------------------
+RESPONSIVE STYLES
+-----------------------------------------*/
+@media screen and (max-width: 991px) {
+    h1 {
+        font-size: 62px;
+    }
 
-/* Film Modal Styling */
+    h2 {
+        font-size: 36px;
+    }
 
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    .navbar {
+        background-color: var(--dark-color);
+    }
+
+    /* General Section Styling */
+    .hero-section {
+        text-align: center;
+        /* Center-align text and image */
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically */
+        justify-content: center;
+        /* Center items vertically */
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    .hero-section img {
+        max-width: 100px;
+        /* Limit image width */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-bottom: 20px;
+        /* Space below the image */
+    }
+
+    /* Optional: Responsive Font Sizes */
+    @media (max-width: 508px) {
+        .hero-section h1 {
+            font-size: 3.5rem;
+            /* Adjust size for smaller screens */
+        }
+
+        .hero-section h2 {
+            font-size: 1.5rem;
+            /* Adjust size for smaller screens */
+        }
+        .hero-section h3 {
+            font-size: 1.5rem;
+            /* Adjust size for smaller screens */
+        }
+
+        .hero-section h4 {
+            font-size: 0.875rem;
+            /* Further adjust size for smaller screens */
+        }
+    }
+
+    /* Button Styling */
+    .hero-section .btn {
+        margin-top: 30px;
+        /* Space above the button */
+    }
+
+    .pricing-thumb {
+        padding: 35px;
+    }
+
+    .ticket-section {
+        padding-top: 130px;
+    }
+
+    .ticket-form {
+        padding: 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+        h1 {
+            font-size: 52px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 26px;
+        }
+
+        h4 {
+            font-size: 22px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+
+    .green-top-banner {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .green-top-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        z-index: -1;
+    }
+
+   /* Film Modal Styling */
 .film-section {
-    background-color: #365E32; /* Light grey background color for contrast */
-    padding: 40px 0; /* Adjust padding for top and bottom spacing */
+    background-color: #365E32;
+    padding: 40px 0;
 }
+
 .film-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content Styling */
 .film-modal-content {
-    background-color: gray; /* Gray background */
-    margin: 50% auto; /* Centering modal */
-    padding: 30px; /* Increased padding for better spacing */
-    border-radius: 8px; /* Rounded corners */
-    max-width: 90vw; /* Responsive max width based on viewport width */
-    width: 100%; /* Ensure it doesn't exceed max-width */
-    position: relative; /* Relative positioning for close button */
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
 }
-/* Close Button Styling */
+
 .film-close {
     position: absolute;
     top: 5px;
-    right: 5px; /* Positioned to the top-right corner */
-    background-color: #ff0000; /* Red background color */
-    color: #fff; /* White text color */
-    border: 1px solid #ff0000; /* Border color matching the background */
-    border-radius: 50%; /* Circular shape */
-    width: 30px; /* Smaller width */
-    height: 30px; /* Smaller height */
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    font-size: 18px; /* Font size for icon */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-    text-align: center; /* Center text */
-    line-height: 1; /* Adjust line height for proper centering */
+    right: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    border: 1px solid #ff0000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    line-height: 1;
 }
 
-/* Hover and Focus Styles for Close Button */
-.film-close:hover,
-.film-close:focus {
-    background-color: #cc0000; /* Slightly darker red on hover/focus */
-    border-color: #cc0000; /* Match border color */
+.film-close:focus,
+.film-close:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
 }
 
-/* Film Box Styling */
 .film-box {
     position: relative;
-    background: #fff; /* White background */
-    overflow: hidden; /* Hide overflow */
-    margin: 0; /* Remove margin */
-    border-radius: 8px; /* Rounded corners */
+    background: #fff;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 8px;
 }
 
 .film-box__image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure image fits within container */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 769px) {
+    .film-modal-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .film-modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    .film-section {
+        background-color: #365E32;
+    }
+}
+
+
+    .link-fx-1:hover .icon line {
+        transform: rotate(-180deg);
+    }
+
+    .link-fx-1:hover .icon line:last-child {
+        transform: rotate(180deg);
+    }
+
+    .link-fx-1::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: currentColor;
+        transform-origin: right center;
+        transition: transform 0.2s 0.1s;
+    }
+
+    .link-fx-1 .icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%) rotate(90deg);
+        font-size: 32px;
+    }
+
+    .icon {
+        --size: 1em;
+        height: var(--size);
+        width: var(--size);
+        display: inline-block;
+        color: inherit;
+        fill: currentColor;
+        line-height: 1;
+        flex-shrink: 0;
+        max-width: initial;
+    }
+
+    .link-fx-1 .icon circle {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transition: stroke-dashoffset 0.2s;
+    }
+
+    .link-fx-1 .icon line {
+        transition: transform 0.4s;
+        transform-origin: 13px 15px;
+    }
+
+    .link-fx-1 .icon line:last-child {
+        transform-origin: 19px 15px;
+    }
+
+
+
+    /*---------------------------------------
+        +CUSTOM ICON COLOR
+        -----------------------------------------*/
+    .custom-icon {
+        color: rgb(24, 134, 52);
+    }
+
+    .custom-image-size {
+        max-width: 100px;
+        height: 50px;
+    }
+
+    /* TFL LOGO */
+    .custom-size {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .img-fluid {
+        margin-top: -20px;
+    }
+
+    /*  ---------------------------------------
+        CUSTOM + JOIN US BUTTON
+        -------------------------------------- /
+    .custom-btn {
+        background: rgb(24, 134, 52);
+        border: 2px solid transparent;
+        border-radius: var(--border-radius-large);
+        color: var(--white-color);
+        font-size: var(--btn-font-size);
+        font-weight: var(--font-weight-bold);
+        line-height: normal;
+        transition: all 0.3s;
+        padding: 10px 20px;
+    }
+
+    .custom-btn:hover {
+        background: var(--custom-btn-bg-hover-color);
+        color: var(--white-color);
+    }
+
+    .custom-border-btn {
+        background: transparent;
+        border: 2px solid var(--custom-btn-bg-color);
+        color: var(--custom-btn-bg-color);
+    }
+
+    .custom-border-btn:hover,
+    .navbar-expand-lg .navbar-nav .nav-link.custom-btn:hover {
+        background: var(--custom-btn-bg-hover-color);
+        border-color: transparent;
+        color: var(--white-color);
+    }
+
+    .custom-btn-bg-white {
+        border-color: var(--white-color);
+        color: var(--white-color);
+    } */
+
+    /*---------------------------------------
+        VIDEO
+        -----------------------------------------*/
+    .video-wrap {
+        z-index: -100;
+    }
+
+    .custom-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*---------------------------------------
+        SITE HEADER
+        -----------------------------------------*/
+    .site-header {
+        background-color: #365E32;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+    /*---------------------------------------
+        HERO
+        -----------------------------------------*/
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+        padding-top: 60px;
+        height: calc(100vh - 51px);
+    }
+
+    .hero-section small {
+        color: var(--white-color);
+        text-transform: uppercase;
+    }
+
+    .hero-section .section-overlay {
+        z-index: 2;
+        opacity: 0.45;
+    }
+
+    .hero-section .container {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+
+    .hero-section .container .row {
+        height: 100%;
+    }
+
+    /*---------------------------------------
+        TFL XMAS
+        -----------------------------------------*/
+    .about-section {
+        background-image: url("../images/edward-unsplash-blur.jpg");
+        background-color: #704010;
+        /* Fallback color */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding: 20px;
+    }
+
+    .about-image {
+        border-radius: var(--border-radius-medium);
+        height: auto;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .about-text-wrap {
+        position: relative;
+    }
+
+    .about-text-icon {
+        background: var(--primary-color);
+        border-radius: 100%;
+        font-size: var(--h3-font-size);
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+    }
+
+
+
+    /*---------------------------------------
+        SCENE AT THE LOBBY ARTISTS
+        -----------------------------------------*/
+    /* General styles */
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    /* Artists Thumbnail */
+    .artists-thumb {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        /* Border for better separation */
+    }
+
+    /* Image styling */
+    .artists-image {
+        width: 100%;
+        height: auto;
+        border-radius: var(--border-radius-medium);
+    }
+
+    /* Button styling */
+    .artists-btn {
+        background-color: #353839;
+        /* Dark background color for the button */
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        border-radius: var(--border-radius-medium);
+        transition: background-color 0.3s ease;
+    }
+
+    .artists-btn:hover {
+        background-color: #353839;
+    }
+
+    /* Hover effect */
+    .artists-hover {
+        background-color: black;
+        border-radius: var(--border-radius-medium);
+        backdrop-filter: blur(5px) saturate(180%);
+        -webkit-backdrop-filter: blur(5px) saturate(180%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        transition: all 0.5s ease;
+        transform: translateY(100%);
+        opacity: 0;
+        display: none;
+        /* Start hidden */
+    }
+
+    .artists-thumb:hover .artists-hover {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* Text styling within hover */
+    .artists-hover p {
+        color: white;
+        margin: 0;
+    }
+
+    .artists-hover p strong {
+        color: white;
+        display: inline-block;
+        min-width: 150px;
+        margin-right: 10px;
+    }
+
+    .artists-hover p a {
+        color: white;
+    }
+
+    .artists-hover hr {
+        margin: 1.5rem 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .artists-hover {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .col-md-6 {
+            flex: 1 1 100%;
+        }
+    }
+
+    /*---------------------------------------
+    EVENT SCHEDULE
+-----------------------------------------*/
+    /* Schedule Section */
+    .schedule-section {
+        background-image: url("../images/star.jpg");
+        background-color: #1b1b1b;
+        /* Darker background color */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* Modal Styles */
+    .modal-event {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-event .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .eventmodal-close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .eventmodal-close:focus,
+    .eventmodal-close:hover {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* See More Button */
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    /* Text Styles */
+    .text-white {
+        color: white;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+
+
+    /* /*---------------------------------------
+        FRONTYARD
+        -----------------------------------------*/
+    /* General Styles for Box Model */
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    /* Main Container */
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    /* Card Grid Container */
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Individual Card Item */
+    .cards_item {
+        display: flex;
+        flex-direction: column;
+        width: calc(33.333% - 1.5rem);
+        padding: 1rem;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+        background: #fff;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    /* Card Image Container */
+    .card_image {
+        height: 200px;
+        width: 100%;
+        padding: 1.2rem;
+        position: relative;
+        overflow: hidden;
+        background: #f0f0f0;
+    }
+
+    /* Pseudo-elements for decoration */
+    .card_image::after,
+    .card_image::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 45px;
+        background: #e6e6e6b8;
+        transform: rotate(45deg);
+        top: 0;
+        left: 60%;
+    }
+
+    .card_image::after {
+        transform: rotate(-45deg);
+        top: auto;
+        bottom: -22px;
+        left: 40%;
+    }
+
+    /* Image styling */
+    .card_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Card Content */
+    .card_content {
+        padding: 1.2rem;
+    }
+
+    /* Card Title */
+    .card_title {
+        font-size: 1.3em;
+        margin: 0.9rem 0 1.2rem;
+    }
+
+    /* Card Text */
+    .card_text {
+        margin: -.4rem 0 1.2rem;
+    }
+
+    /* Hover Effect for Cards */
+    .cards_item:hover {
+        transform: scale(1.02);
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+    }
+
+    .pricing-section {
+        padding: 60px 0;
+        /* Adjust as needed */
+    }
+
+    .pricing-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center-align content */
+    }
+
+    .pricing-section .row {
+        width: 100%;
+        /* Ensure full-width for rows */
+    }
+
+    .cards {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 15px;
+    }
+
+    .text-content {
+        margin-left: auto;
+        margin-right: 20;
+    }
+
+    .text-content1 {
+        margin-right: auto;
+        margin-left: 20px;
+    }
+
+    /* /*---------------------------------------
+        CUSTOM FORM
+        ---------------------------------------- 
+    .custom-form .form-control {
+        color: var(--p-color);
+        margin-bottom: 24px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        outline: none;
+    }
+
+    .custom-form button[type="submit"] {
+        background: var(--custom-btn-bg-color);
+        border: none;
+        border-radius: var(--border-radius-large);
+        color: var(--white-color);
+        font-size: var(--p-font-size);
+        font-weight: var(--font-weight-medium);
+        transition: all 0.3s;
+        margin-bottom: 0;
+    }
+
+    .custom-form button[type="submit"]:hover,
+    .custom-form button[type="submit"]:focus {
+        background: var(--custom-btn-bg-hover-color);
+        border-color: transparent;
+    } */
+
+    /*---------------------------------------
+        SITE FOOTER
+        -----------------------------------------*/
+    .site-footer {
+        background-color: var(--dark-color);
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 30px;
+    }
+
+    .site-footer-top {
+        background-color: black;
+        background-image: url("../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg");
+        background-repeat: no-repeat;
+        margin-bottom: 70px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .site-footer-bottom {
+        border-top: 1px solid #1f1c1c;
+        margin-top: 60px;
+    }
+
+    .site-footer-title {
+        color: var(--primary-color);
+    }
+
+    .copyright-text,
+    .site-footer-link {
+        color: var(--white-color);
+    }
+
+    .site-footer-links {
+        padding-left: 0;
+    }
+
+    .site-footer-link-item {
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px;
+        color: orange;
+
+    }
+
+    .copyright-text {
+        font-size: var(--copyright-font-size);
+    }
+
+    /* Adjust margin for the titles and text */
+    .site-footer-title {
+        margin-top: -70px;
+        /* Adjust as needed */
+    }
+
+    /*---------------------------------------
+        SOCIAL ICON
+        -----------------------------------------*/
+    .social-icon {
+        display: flex;
+        align-items: left;
+        /* Aligns items vertically */
+        margin-left: -30px;
+        /* Adjust this value as needed to move icons left */
+
+    }
+
+    .social-icon-item {
+        list-style: none;
+        display: flex;
+        /* Changed from inline-block to flex */
+        align-items: left;
+        /* Ensures vertical alignment */
+    }
+
+    .social-icon-link {
+        background: #365E32;
+        border-radius: var(--border-radius-large);
+        color: var(--white-color);
+        font-size: var(--copyright-font-size);
+        display: flex;
+        margin-right: 10px;
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        line-height: 36px;
+        transition: background 0.2s, color 0.2s;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .social-icon-link:hover {
+        background: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    .social-icon-link span {
+        display: block;
+    }
+
+    .social-icon-link span:hover::before {
+        animation: spinAround 2s linear infinite;
+    }
+
+    @keyframes spinAround {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+ 
+/*---------------------------------------
+                FILM MODAL
+-----------------------------------------*/
+.film-section {
+    background-color: #365E32;
+    padding: 40px 0;
+}
+
+.film-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.film-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+}
+
+.film-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff0000;
+    color: #fff;
+    border: 1px solid #ff0000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    line-height: 1;
+}
+
+.film-close:focus,
+.film-close:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+.film-box {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.film-box__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Responsive Modal Styling */
 @media (min-width: 769px) {
     .film-modal-content {
-        max-width: 80vw; /* Slightly reduce the width on larger screens */
+        width: 80%;
     }
 }
 
 @media (max-width: 768px) {
     .film-modal-content {
-        width: 90%; /* Full width for smaller screens */
-        margin: 55% auto; /* Adjust margin for mobile view */
+        width: 90%;
+        margin: 10% auto;
     }
 }
-@media (min-width: 1200px) {
-    .film-modal-content {
-        max-width: 70vw; /* Further reduce width on very large screens */
+    /* Responsive Modal Styling */
+    @media (min-width: 769px) {
+        .film-modal-content {
+            max-width: 80vw;
+            /* Slightly reduce the width on larger screens */
+        }
     }
-}
 
-/* Games Modal Styling */
-.games-modal .modal-content {
-    background-color: #fff; /* White background for games section */
-    padding: 30px; /* Increased padding for better spacing */
-    max-width: 600px; /* Maximum width specific to games section */
-}
+    @media (max-width: 768px) {
+        .film-modal-content {
+            width: 90%;
+            /* Full width for smaller screens */
+            margin: 55% auto;
+            /* Adjust margin for mobile view */
+        }
+    }
+    @media (min-width: 1200px) {
+        .film-modal-content {
+            max-width: 70vw;
+            /* Further reduce width on very large screens */
+        }
+    }
 
-.games-close {
-    color:  red; /* Blue color for close button in games modal */
-    top: 10px; /* Position adjustments */
-    left: 10px; /* Position adjustments */
-
-}
-
-/* Games Box Styling in Modal */
-.games-box {
-    position: relative;
-    background: #fff; /* White background for games box */
-    overflow: hidden;
-    margin: 0; /* Remove margin in modal */
-    border-radius: 0; /* No border radius for full-width image */
-}
-
-.games-box__image {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure image fits within the container */
-}
-
-/* Games Modal Styling for Responsiveness */
-@media (min-width: 769px) {
+    /* Games Modal Styling */
     .games-modal .modal-content {
-        width: 80%; /* Adjust width for larger screens */
-        margin: 55% auto; /* Center the modal */
+        background-color: #fff;
+        /* White background for games section */
+        padding: 30px;
+        /* Increased padding for better spacing */
+        max-width: 600px;
+        /* Maximum width specific to games section */
     }
-}
 
-@media (max-width: 768px) {
-    .games-modal .modal-content {
-        width: 90%; /* Full width for smaller screens */
-        margin: 55% auto; /* Adjust margin for mobile view */
+    .games-close {
+        color: red;
+        /* Blue color for close button in games modal */
+        top: 10px;
+        /* Position adjustments */
+        left: 10px;
+        /* Position adjustments */
+
     }
-}
 
-/* Button Styling for See More and Let's Play */
-.modal-btn {
-    background-color: #18a058; /* Green background color */
-    border: 2px solid #18a058; /* Border color to match background */
-    border-radius: 8px; /* Rounded corners for a modern look */
-    color: #1b1b1b; /* White text color */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Bold text */
-    line-height: 1.5; /* Line height */
-    padding: 12px 24px; /* Padding for better button size */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Inline-block for better spacing */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
+    /* Games Box Styling in Modal */
+    .games-box {
+        position: relative;
+        background: #fff;
+        /* White background for games box */
+        overflow: hidden;
+        margin: 0;
+        /* Remove margin in modal */
+        border-radius: 0;
+        /* No border radius for full-width image */
+    }
 
-/* Hover Effect for Buttons */
-.modal-btn:hover {
-    background-color: #148a4d; /* Darker green for hover */
-    border-color: #148a4d; /* Darker border for hover */
-    color: #ffffff; /* Keep text color white on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-}
+    .games-box__image {
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+        object-fit: contain;
+        /* Ensure image fits within the container */
+    }
 
-/* Focus Effect for Accessibility */
-.modal-btn:focus {
-    outline: 2px solid #ffbf00; /* Yellow outline for focus */
-    outline-offset: 2px; /* Space between outline and button */
-}
+    /* Games Modal Styling for Responsiveness */
+    @media (min-width: 769px) {
+        .games-modal .modal-content {
+            width: 80%;
+            /* Adjust width for larger screens */
+            margin: 55% auto;
+            /* Center the modal */
+        }
+    }
 
-/* Styles for Game Modal Button */
-#openModalGames {
-    background-color: #365E32; /* Blue background color */
-    border: 2px solid #1e90ff; /* Border color to match background */
-}
+    @media (max-width: 768px) {
+        .games-modal .modal-content {
+            width: 90%;
+            /* Full width for smaller screens */
+            margin: 55% auto;
+            /* Adjust margin for mobile view */
+        }
+    }
 
-/* Hover Effect for Game Modal Button */
-#openModalGames:hover {
-    background-color: #1c86ee; /* Darker blue for hover */
-    border-color: #1c86ee; /* Darker border for hover */
-}
+    /* Button Styling for See More and Let's Play */
+    .modal-btn {
+        background-color: #18a058;
+        /* Green background color */
+        border: 2px solid #18a058;
+        /* Border color to match background */
+        border-radius: 8px;
+        /* Rounded corners for a modern look */
+        color: #1b1b1b;
+        /* White text color */
+        font-size: 16px;
+        /* Font size */
+        font-weight: bold;
+        /* Bold text */
+        line-height: 1.5;
+        /* Line height */
+        padding: 12px 24px;
+        /* Padding for better button size */
+        text-decoration: none;
+        /* Remove underline */
+        display: inline-block;
+        /* Inline-block for better spacing */
+        transition: all 0.3s ease;
+        /* Smooth transition for hover effects */
+    }
 
-/* Styles for Film Modal Button */
-#openModalFilm {
-    background-color: white; /* Orange background color */
-    border: 2px solid #365E32; /* Border color to match background */
-}
+    /* Hover Effect for Buttons */
+    .modal-btn:hover {
+        background-color: #148a4d;
+        /* Darker green for hover */
+        border-color: #148a4d;
+        /* Darker border for hover */
+        color: #ffffff;
+        /* Keep text color white on hover */
+        transform: translateY(-2px);
+        /* Slight lift effect on hover */
+    }
 
-/* Hover Effect for Film Modal Button */
-#openModalFilm:hover {
-    background-color: #ff6347; /* Darker orange for hover */
-    border-color: #ff6347; /* Darker border for hover */
-}
+    /* Focus Effect for Accessibility */
+    .modal-btn:focus {
+        outline: 2px solid #ffbf00;
+        /* Yellow outline for focus */
+        outline-offset: 2px;
+        /* Space between outline and button */
+    }
+
+    /* Styles for Game Modal Button */
+    #openModalGames {
+        background-color: #365E32;
+        /* Blue background color */
+        border: 2px solid #1e90ff;
+        /* Border color to match background */
+    }
+
+    /* Hover Effect for Game Modal Button */
+    #openModalGames:hover {
+        background-color: #1c86ee;
+        /* Darker blue for hover */
+        border-color: #1c86ee;
+        /* Darker border for hover */
+    }
+
+    /* Styles for Film Modal Button */
+    #openModalFilm {
+        background-color: white;
+        /* Orange background color */
+        border: 2px solid #365E32;
+        /* Border color to match background */
+    }
+
+    /* Hover Effect for Film Modal Button */
+    #openModalFilm:hover {
+        background-color: #ff6347;
+        /* Darker orange for hover */
+        border-color: #ff6347;
+        /* Darker border for hover */
+    }
 }
 
 /*celeb section*/
 .celeb-section {
-    background-color: #365E32; /* Light grey background color for contrast */
-    padding: 40px 0; /* Adjust padding for top and bottom spacing */
+    background-color: #365E32;
+    /* Light grey background color for contrast */
+    padding: 40px 0;
+    /* Adjust padding for top and bottom spacing */
 }
 
 /*countdown*/
 
-body { 
-    font: normal 3vw/1.5 Arial, Helvetica, sans-serif; 
+body {
+    font: normal 3vw/1.5 Arial, Helvetica, sans-serif;
     word-wrap: break-word;
     color: #eee;
     background: #353535;
     margin: 0;
     padding: 0;
 }
+
+/*---------------------------------------
+                COUNTDOWN
+-----------------------------------------*/
 
 #countdown {
     height: auto;
@@ -2416,67 +2132,50 @@ body {
     margin: auto;
     padding: 5vw 0;
     position: absolute;
-    top: 65%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: transparent;
     border: none;
-    width: 90vw; /* Responsive width */
-    max-width: 100%; /* Ensure it doesn’t exceed screen size */
+    width: 90vw;
+    max-width: 100%;
 }
-
 #tiles {
     display: flex;
-    justify-content: space-around; /* Distribute the tiles evenly */
-}
+    justify-content: space-around;
+ }
 
 .tile {
     text-align: center;
-    width: 20vw; /* Responsive width */
-}
+    width: 20vw;
+ }
 
 .tile span {
-    font: bold 7vw 'Droid Sans', Arial, sans-serif; /* Responsive font size */
-    color: #fff; /* White color for countdown numbers */
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    border: none; /* Remove any borders */
-    border-radius: 3px;
-    margin: 0 2vw; /* Responsive margin */
-    padding: 5vw 0; /* Responsive padding */
-    display: block;
+    font: bold 7vw 'Droid Sans', Arial, sans-serif;
+     color: #fff;
+     background-color: rgba(0, 0, 0, 0.3);
+     border: none;
+     border-radius: 3px;
+    margin: 0 2vw;
+     padding: 5vw 0;
+     display: block;
 }
 
 .tile .label {
-    margin-top: 1vw; /* Space between number and label */
-    font-size: 4vw; /* Responsive font size */
-    color: #fff; /* White color for labels */
-}
+    margin-top: 1vw;
+     font-size: 4vw;
+     color: #fff;
+ }
 
-        
-
-        .games-section {
-            background-image: url('images/pp.jpg'); /* Replace with your image path */
-            background-size: cover; /* Ensures the image covers the entire section */
-            background-position: center; /* Centers the background image */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-        }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        /* Adjust card width and margins on smaller screens */
+.games-section {
+    background-image: url("images/pp.jpg");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+/*---------------------------------------
+                CARDS
+-----------------------------------------*/
 @media (max-width: 1200px) {
     .cards_item {
         width: calc(50% - 1.5rem);
@@ -2486,6 +2185,6 @@ body {
 @media (max-width: 768px) {
     .cards_item {
         width: calc(100% - 1.5rem);
-        margin-left: 1rem; /* Shifts cards slightly to the right on mobile screens */
+        margin-left: 1rem;
     }
 }
