@@ -274,7 +274,7 @@ strong {
 
 -
 /*---------------------------------------
-HERO
+PASKONG PINOY TITLE
 -----------------------------------------*/
 .hero-section {
     position: relative;
@@ -302,6 +302,56 @@ HERO
 
 .hero-section .container .row {
     height: 100%;
+}
+/*--------------------------------------
+                COUNTDOWN
+-----------------------------------------*/
+
+#countdown {
+    height: auto;
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    padding: 5% 0;
+    /* Changed from 5vw to 5% for better scaling */
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    width: 50%;
+    max-width: 1000px;
+    /* Adjusted max-width for better scaling on large screens */
+}
+
+#tiles {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tile {
+    text-align: center;
+    width: 30vw;
+}
+
+.tile .label {
+    margin-top: 1vw;
+    font-size: 2vw;
+    color: #fff;
+}
+
+.date-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.date-wrap h5 {
+    font-size: large;
+    color: white;
 }
 
 /*---------------------------------------
@@ -353,8 +403,7 @@ TFL XMAS
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-    /* Add border to match original styles if needed */
+     /* Add border to match original styles if needed */
 }
 
 /* Image styling */
@@ -413,7 +462,14 @@ TFL XMAS
     border: none;
     padding: 5px 10px;
     font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border-radius: var(--border-radius-medium);
+    transition: background-color 0.3s ease;
 }
+
 .artists-btn:hover {
     background-color: #353839;
 }
@@ -478,6 +534,8 @@ FRONTYARD
     gap: 1.5rem;
     margin: 0;
     padding: 0;
+    
+    
 }
 
 /* Individual Card Item */
@@ -665,14 +723,20 @@ SOCIAL ICON
     /* Adjust this value as needed to move icons left */
 
 }
+.social-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
 
 .social-icon-item {
     list-style: none;
     display: flex;
-    /* Changed from inline-block to flex */
-    align-items: left;
-    /* Ensures vertical alignment */
-}
+     align-items: left;
+ }
 
 .social-icon-link {
     background: #365E32;
@@ -1091,7 +1155,7 @@ RESPONSIVE STYLES
         border-radius: var(--border-radius-medium);
         height: auto;
         position: relative;
-        margin: 0 auto;
+        margin-top: -10px;
     }
 
     .about-text-wrap {
@@ -1107,9 +1171,28 @@ RESPONSIVE STYLES
         line-height: 70px;
         text-align: center;
     }
+
+    .services-info {
+        text-align: center;
+        padding: 20px;
+        /* Optional: Adds some padding around the text */
+    }
+
+    .services-info h2,
+    .services-info h6,
+    .services-info p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Add extra space above the #YourBestHomeinBaguio paragraph */
+    .services-info p:last-child {
+        margin-top: 50px;
+        /* Adjust this value as needed */
+    }
     /*---------------------------------------
-        SCENE AT THE LOBBY ARTISTS
-        -----------------------------------------*/
+    SCENE AT THE LOBBY ARTISTS
+    -----------------------------------------*/
     .container {
         max-width: 1140px;
         margin: 0 auto;
@@ -1119,8 +1202,9 @@ RESPONSIVE STYLES
         position: relative;
         overflow: hidden;
         margin-bottom: 20px;
-        border: 1px solid #ddd;
+        border: none; /* Removes the white outline */
     }
+    
 
     .artists-image {
         width: 100%;
@@ -1128,19 +1212,6 @@ RESPONSIVE STYLES
         border-radius: var(--border-radius-medium);
     }
 
-    .artists-btn {
-        background-color: #353839;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        font-size: 14px;
-        cursor: pointer;
-        position: absolute;
-        bottom: 5px;
-        left: 5px;
-        border-radius: var(--border-radius-medium);
-        transition: background-color 0.3s ease;
-    }
 
     .artists-btn:hover {
         background-color: #353839;
@@ -1298,7 +1369,7 @@ RESPONSIVE STYLES
     width: calc(33.333% - 1.5rem);
     padding: 1rem;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
-    background: #fff;
+    background: #365E32;
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
     box-sizing: border-box;
@@ -1691,52 +1762,6 @@ body {
     background: #353535;
     margin: 0;
     padding: 0;
-}
-
-/*---------------------------------------
-                COUNTDOWN
------------------------------------------*/
-
-#countdown {
-    height: auto;
-    text-align: center;
-    border-radius: 5px;
-    margin: auto;
-    padding: 5vw 0;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    border: none;
-    width: 90vw;
-    max-width: 100%;
-}
-#tiles {
-    display: flex;
-    justify-content: space-around;
-}
-
-.tile {
-    text-align: center;
-    width: 20vw;
-}
-
-.tile span {
-    font: bold 7vw 'Droid Sans', Arial, sans-serif;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.3);
-    border: none;
-    border-radius: 3px;
-    margin: 0 2vw;
-    padding: 5vw 0;
-    display: block;
-}
-
-.tile .label {
-    margin-top: 1vw;
-    font-size: 4vw;
-    color: #fff;
 }
 
 .games-section {
