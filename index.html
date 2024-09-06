@@ -118,11 +118,23 @@
                 </div>
             </div>
         </div>
+
         <div class="video-wrap">
-            <video autoplay="" loop="" muted="" class="custom-video" poster="">
+            <video id="videoPlayer1" class="custom-video" autoplay="autoplay" muted="muted">
                 <source src="video/kultura.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+            <video
+                id="videoPlayer2"
+                class="custom-video"
+                autoplay="autoplay"
+                muted="muted"
+                style="display: none;">
+                <source src="video/kultura3.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
             </video>
         </div>
+
     </section>
 
     <!-- TFL XMAS -->
@@ -610,6 +622,7 @@
         <script src="js/togglebtn.js"></script>
         <script src="js/artistspopup.js"></script>
         <script src="js/countdown.js"></script>
+        <script src="js/playnextvid.js"></script>
 
     </body>
 </html>
